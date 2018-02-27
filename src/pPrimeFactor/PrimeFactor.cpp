@@ -129,6 +129,8 @@ bool PrimeFactor::Iterate()
   list<string>::iterator p;
   for(p=m_input_number_str_list.begin(); p!=m_input_number_str_list.end(); ) {
     string str = *p;
+    string full_result = str.c_str();
+    
     //   stringstream ss_str(str);
 
     uint64_t f_int_input_number = 0;
@@ -139,12 +141,14 @@ bool PrimeFactor::Iterate()
     if (f_int_input_number % two == zero)                                                                                                     
     {                                                                                                                             
     //EVEN                                                                                                                         
-     Notify("NUM_RESULT", "EVEN");                                                                                          
+      full_result = full_result+ ",EVEN";
+      Notify("NUM_RESULT", full_result);                                                                                          
      }                                                                                                                           
      else                                                                                                                           
     {                                                                                                                              
-    //ODD                                                                                                                           
-     Notify("NUM_RESULT", "ODD");                                                                                                 
+    //ODD                          
+     full_result = full_result+ ",ODD";                                                                                                 
+     Notify("NUM_RESULT", full_result);                                                                                                 
     }                                                                                                                            
 
     p = m_input_number_str_list.erase(p);

@@ -39,16 +39,16 @@ ProcessConfig = uTimerScript
  {
    paused = false
 
-   event  = var=NUM_VALUE, val="1",  time=0.1
-   event  = var=NUM_VALUE, val="2",  time=0.15
-   event  = var=NUM_VALUE, val="3",  time=0.2
-   event  = var=NUM_VALUE, val="4",  time=0.3
-   event  = var=NUM_VALUE, val="5",  time=2.5
-   event  = var=NUM_VALUE, val="6",  time=3.0
-   event  = var=NUM_VALUE, val="7",  time=3.5
-   event  = var=NUM_VALUE, val="8",  time=4.0
-   event  = var=NUM_VALUE, val="9",  time=4.5
-   event  = var=NUM_VALUE, val="10", time=5:10
+   event  = var=NUM_VALUE, val="1",  time=0.2
+   event  = var=NUM_VALUE, val="2",  time=0.4
+   event  = var=NUM_VALUE, val="3",  time=0.5
+   event  = var=NUM_VALUE, val="4",  time=0.6
+   event  = var=NUM_VALUE, val="5",  time=4.5
+   event  = var=NUM_VALUE, val="6",  time=5.0
+   event  = var=NUM_VALUE, val="7",  time=6.5
+   event  = var=NUM_VALUE, val="8",  time=7.0
+   event  = var=NUM_VALUE, val="9",  time=7.5
+   event  = var=NUM_VALUE, val="10", time=8:10
 
    reset_max  = nolimit
    reset_time = all-posted
