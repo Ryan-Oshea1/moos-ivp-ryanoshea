@@ -27,8 +27,8 @@ class PrimeFactor : public CMOOSApp
 
  protected:
    void RegisterVariables();
-   //   string m_input_number;
-   //list<string> m_input_number_str_list;
+   string m_input_number;
+   list<string> m_input_number_str_list;
  private: // Configuration variables
 
  private: // State variables

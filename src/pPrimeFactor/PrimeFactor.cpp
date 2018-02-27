@@ -20,8 +20,8 @@ using namespace std;
 PrimeFactor::PrimeFactor()
 {
   //input value
-  //  string m_input_number = 0;
-  //list<string> m_input_number_str_list;
+  string m_input_number = "empty";
+  list<string> m_input_number_str_list;
 }
 
 //---------------------------------------------------------
@@ -62,17 +62,17 @@ bool PrimeFactor::OnNewMail(MOOSMSG_LIST &NewMail)
     bool   mstr  = msg.IsString();
 
 
-    Notify("NUM_RESULT", "ODD");
+    //  Notify("NUM_RESULT", "ODD");
 
     //if the message is from the NAV_X file then we iterate x current                                                                                                                
-    /*if (key == "NUM_VALUE")
+    if (key == "NUM_VALUE")
       {
 	//	Notify("NUM_RESULT", "ODD");
 
 	m_input_number = sval;
 	m_input_number_str_list.push_back((m_input_number));
       }
-    */
+    
 
     //    Notify("NUM_RESULT", "ODD");    
 
@@ -123,8 +123,8 @@ bool PrimeFactor::Iterate()
 {
   //    Notify("NUM_RESULT",102);
 
-  Notify("NUM_RESULT", "ODD"); 
-  /*
+  //Notify("NUM_RESULT", "ODD"); 
+  
   //iterate through and assign value to NUM_Result
   list<string>::iterator p;
   for(p=m_input_number_str_list.begin(); p!=m_input_number_str_list.end(); ) {
@@ -149,9 +149,9 @@ bool PrimeFactor::Iterate()
 
     p = m_input_number_str_list.erase(p);
   }
-  */
+  
 
-  Notify("NUM_RESULT", "ODD");
+  // Notify("NUM_RESULT", "ODD");
 
 
 
