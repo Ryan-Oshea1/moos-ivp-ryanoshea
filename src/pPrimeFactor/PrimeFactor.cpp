@@ -122,11 +122,39 @@ bool PrimeFactor::Iterate()
 {
   //iterate through the list of PrimeEntries, doing some amount of work on each one
   // if a prime entry finishes, remove it from the list and report its output using the getreport feature of the class
-  
+  //iterate through and assign value to NUM_Result                                                                                                                     
+  list<string>::iterator p;
+  for(p=m_prime_entries.begin(); p!=m_prime_entries.end(); ) {
+    string str = *p;
+    string full_result = str.c_str();
+
+    //   stringstream ss_str(str);                                                                                                                                     
+
+    uint64_t f_int_input_number = 0;
+    f_int_input_number = strtoul(str.c_str(),NULL,0);;
+    uint64_t zero = 0;
+    uint64_t two = 2;
+    //even / odd assignment using modulo                                                                                                                               
+    if (f_int_input_number % two == zero)
+      {
+	//EVEN                                                                                                                                                             
+	full_result = full_result+ ",EVEN";
+	Notify("NUM_RESULT", full_result);
+      }
+    else
+      {
+	//ODD                                                                                                                                                              
+	full_result = full_result+ ",ODD";
+	Notify("NUM_RESULT", full_result);
+      }
+
+    p = m_input_number_str_list.erase(p);
+  }
 
 
 
 
+  /*
   //iterate through and assign value to NUM_Result
   list<string>::iterator p;
   for(p=m_input_number_str_list.begin(); p!=m_input_number_str_list.end(); ) {
@@ -155,7 +183,7 @@ bool PrimeFactor::Iterate()
 
     p = m_input_number_str_list.erase(p);
   }
-  
+  */
 
   // Notify("NUM_RESULT", "ODD");
 
