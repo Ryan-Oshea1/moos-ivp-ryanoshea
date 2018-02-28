@@ -11,6 +11,8 @@
 #include "MOOS/libMOOS/MOOSLib.h"
 #include <list>
 #include <string>
+#include "PrimeEntry.h"
+
 using namespace std;
 
 class PrimeFactor : public CMOOSApp
@@ -29,6 +31,8 @@ class PrimeFactor : public CMOOSApp
    void RegisterVariables();
    string m_input_number;
    list<string> m_input_number_str_list;
+   list<PrimeEntry *> m_prime_entries;
+   int m_received_index_pp;
  private: // Configuration variables
 
  private: // State variables

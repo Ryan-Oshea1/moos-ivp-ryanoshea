@@ -11,6 +11,7 @@
 #include <list>
 #include <string>
 #include <cstdint>
+//#include "PrimeEntry.h"
 
 using namespace std;
 
@@ -22,6 +23,8 @@ PrimeFactor::PrimeFactor()
   //input value
   string m_input_number = "empty";
   list<string> m_input_number_str_list;
+  list<PrimeEntry *> m_prime_entries;
+  int m_received_index_pp = 1;
 }
 
 //---------------------------------------------------------
@@ -68,34 +71,30 @@ bool PrimeFactor::OnNewMail(MOOSMSG_LIST &NewMail)
     if (key == "NUM_VALUE")
       {
 	//	Notify("NUM_RESULT", "ODD");
-
+	
 	m_input_number = sval;
 	m_input_number_str_list.push_back((m_input_number));
       }
     
+    //if num_value, then we assign the input to a class and put it in a list
+    if (key == "NUM_VALUE")
+      {
+	//convert string to unsigned long
+	m_input_number = sval;
+	unsigned long int input_prime_value;
+	input_prime_value = strtoul(sval.c_str(),NULL,0);
 
-    //    Notify("NUM_RESULT", "ODD");    
-
- //integer values for below modulo
-    // int zero = 0;
-    // int two = 0;
-
-    //even / odd assignment using modulo
-    //if (m_input_number % 2 == 0)
-       //{
-	//EVEN
-       //	Notify("NUM_RESULT", "EVEN");
-	// }
-     // else
-      //{
-       //ODD
-       // Notify("NUM_RESULT", "ODD");
-       //}
-
-    //Notify when some mail is received
-     // Notify("NUM_RESULT",m_input_number);
-
-
+	//define a pointer to class time prime, to make a list of multiple entries of same class
+	PrimeEntry * optimus;
+	//	Notify("NUM_OUT", input_prime_value);
+	//initialize this class entry
+	optimus->setOriginalVal(input_prime_value);
+	optimus->setReceivedIndex(m_received_index_pp);
+	
+	 m_prime_entries.push_back(optimus);
+	m_received_index_pp = m_received_index_pp +1;
+      }
+    
    }
 	
    return(true);
@@ -121,10 +120,13 @@ bool PrimeFactor::OnConnectToServer()
 
 bool PrimeFactor::Iterate()
 {
-  //    Notify("NUM_RESULT",102);
-
-  //Notify("NUM_RESULT", "ODD"); 
+  //iterate through the list of PrimeEntries, doing some amount of work on each one
+  // if a prime entry finishes, remove it from the list and report its output using the getreport feature of the class
   
+
+
+
+
   //iterate through and assign value to NUM_Result
   list<string>::iterator p;
   for(p=m_input_number_str_list.begin(); p!=m_input_number_str_list.end(); ) {
