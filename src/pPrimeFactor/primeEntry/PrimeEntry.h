@@ -5,6 +5,8 @@
  #include <vector> 
  #include <cstdint>
  #include <math.h>
+ #include <time.h>
+
 using namespace std; 
  class PrimeEntry
 {
@@ -29,6 +31,8 @@ using namespace std;
   bool          m_done;
   unsigned int  m_received_index;
   unsigned int  m_calculated_index;
+  time_t m_start_time;
+  time_t m_stop_time;
 
   std::vector<uint64_t> m_factors;
 };
