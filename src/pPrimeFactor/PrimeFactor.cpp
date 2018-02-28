@@ -11,6 +11,7 @@
 #include <list>
 #include <string>
 #include <cstdint>
+//#include <vector>
 //#include "PrimeEntry.h"
 
 using namespace std;
@@ -123,9 +124,19 @@ bool PrimeFactor::Iterate()
   //iterate through the list of PrimeEntries, doing some amount of work on each one
   // if a prime entry finishes, remove it from the list and report its output using the getreport feature of the class
   //iterate through and assign value to NUM_Result                                                                                                                     
-  list<string>::iterator p;
-  for(p=m_prime_entries.begin(); p!=m_prime_entries.end(); ) {
-    string str = *p;
+  list<PrimeEntry *>::iterator p_prime;
+  //p_prime=m_prime_entries.begin();
+
+  //while(p_prime!=m_prime_entries.end()) {
+    //reference first prime value
+    //unsigned long int iterations = 1;
+    //(*p_prime)->factor(iterations);
+    
+    //unsigned int calc_index = 1;
+    //(*p_prime)->setCalculatedIndex(calc_index);
+    //string result_str = (*p)->getReport();
+    //Notify("RESULT", 1);
+  /* string str = *p;
     string full_result = str.c_str();
 
     //   stringstream ss_str(str);                                                                                                                                     
@@ -147,14 +158,15 @@ bool PrimeFactor::Iterate()
 	full_result = full_result+ ",ODD";
 	Notify("NUM_RESULT", full_result);
       }
+  */
+    //++p_prime;
+    //p_prime = m_prime_entries.erase(p_prime);
+    //}
 
-    p = m_input_number_str_list.erase(p);
-  }
 
 
 
-
-  /*
+  
   //iterate through and assign value to NUM_Result
   list<string>::iterator p;
   for(p=m_input_number_str_list.begin(); p!=m_input_number_str_list.end(); ) {
@@ -183,7 +195,7 @@ bool PrimeFactor::Iterate()
 
     p = m_input_number_str_list.erase(p);
   }
-  */
+  
 
   // Notify("NUM_RESULT", "ODD");
 
