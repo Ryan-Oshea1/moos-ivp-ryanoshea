@@ -86,7 +86,7 @@ bool PrimeFactor::OnNewMail(MOOSMSG_LIST &NewMail)
 
 	//define a pointer to class time prime, to make a list of multiple entries of same class
 	PrimeEntry * optimus;
-	//	Notify("NUM_OUT", input_prime_value);
+		Notify("NUM_OUT", input_prime_value);
 	//initialize this class entry
 	optimus->setOriginalVal(input_prime_value);
 	optimus->setReceivedIndex(m_received_index_pp);
