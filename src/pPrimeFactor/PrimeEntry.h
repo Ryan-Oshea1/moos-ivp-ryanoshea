@@ -6,6 +6,7 @@
  #include <cstdint>
  #include <math.h>
  #include <time.h>
+ #include "MOOS/libMOOS/MOOSLib.h"
 
 using namespace std; 
  class PrimeEntry

@@ -39,8 +39,9 @@ PrimeEntry::~PrimeEntry()
 void PrimeEntry::setOriginalVal(unsigned long int v)
 {
   m_orig = v;
-  m_start_index = 2;
-  m_start_time = time (NULL);
+  // m_start_index = 2;
+  //  m_start_time = time (NULL);
+  m_start_time = MOOSTime();
 }
 
 //factor for some amount of steps
@@ -59,7 +60,7 @@ bool   PrimeEntry::factor(unsigned long int max_steps)
   //start at the start index
 
   //if the current value is divisible, then add it to the list of primes (m_factors), else continue until max steps is reached, if a prime is found, set m_start_index to 1
-  for(int p=0;p!=max_steps;p++)
+  for(int p=0;p<=max_steps;p++)
  { 
    //if the current index is less than the square root of the current value then we set done to be true and stop the search set start index to 0          
    //cout << "1" <<endl;
@@ -93,7 +94,8 @@ bool   PrimeEntry::factor(unsigned long int max_steps)
 	 {
 	   m_factors.push_back(m_current_value);
 	 }
-       m_stop_time = time (NULL);
+       m_stop_time = MOOSTime();
+       //       m_stop_time = time (NULL);
        //       setDone(true);
        break;
      }
