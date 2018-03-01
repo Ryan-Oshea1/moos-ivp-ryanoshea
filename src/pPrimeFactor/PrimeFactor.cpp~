@@ -26,7 +26,6 @@ PrimeFactor::PrimeFactor()
   //list<string> m_input_number_str_list;
   //list<PrimeEntry> m_prime_entries;
   m_received_index_pp = 1;
-  m_calc_index = 1;                                                             
 }
 
 //---------------------------------------------------------
@@ -83,7 +82,7 @@ bool PrimeFactor::OnNewMail(MOOSMSG_LIST &NewMail)
       {
 	//convert string to unsigned long
 	m_input_number = sval;
-	uint64_t input_prime_value;
+	unsigned long int input_prime_value;
 	input_prime_value = strtoul(sval.c_str(),NULL,0);
 
 	//define a pointer to class time prime, to make a list of multiple entries of same class
@@ -93,7 +92,7 @@ bool PrimeFactor::OnNewMail(MOOSMSG_LIST &NewMail)
 	optimus.setOriginalVal(input_prime_value);
 	optimus.setReceivedIndex(m_received_index_pp);
 	
-	m_prime_entries.push_back(optimus);
+	 m_prime_entries.push_back(optimus);
 	m_received_index_pp = m_received_index_pp +1;
       }
     
@@ -133,25 +132,18 @@ bool PrimeFactor::Iterate()
       PrimeEntry& entry = *p_prime_entry; //entry is the current object on the list
 
       //reference first prime value                                                          
-      unsigned long int iterations = 100000;                                                                             
-      
-
+      unsigned long int iterations = 10;                                                                             
+      unsigned int calc_index = 1;                                                             
+      entry.setCalculatedIndex(calc_index); 
       entry.setDone(entry.factor(iterations));
-      
+
 
       //if the entry is done
       if(entry.done())
 	{
-	  entry.setCalculatedIndex(m_calc_index); 
 	  string result_str = entry.getReport();
 	  p_prime_entry = m_prime_entries.erase(p_prime_entry);  
 	  Notify("RESULT", result_str);   
-	
-	  m_calc_index+=1 ;
-	}
-      else
-	{
-	  p_prime_entry++;
 	}
       count ++;
     }

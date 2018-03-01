@@ -33,7 +33,6 @@ class PrimeFactor : public CMOOSApp
    list<string> m_input_number_str_list;
    list<PrimeEntry> m_prime_entries;
    int m_received_index_pp;
-   unsigned int m_calc_index;
  private: // Configuration variables
 
  private: // State variables

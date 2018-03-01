@@ -17,14 +17,14 @@ using namespace std;
 
 PrimeEntry::PrimeEntry()
 {
-  m_start_index = 2;
-  /*uint64_t      m_orig;
+  uint64_t      m_start_index = 2;
+  uint64_t      m_orig;
   bool          m_done;
   unsigned int  m_received_index;
   unsigned int  m_calculated_index;
   std::vector<uint64_t> m_factors;
   time_t m_start_time;
-  time_t m_stop_time; */
+  time_t m_stop_time;
 }
 
 //---------------------------------------------------------                                                                                                                        
