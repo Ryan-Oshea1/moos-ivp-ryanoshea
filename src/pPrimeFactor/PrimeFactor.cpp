@@ -133,7 +133,7 @@ bool PrimeFactor::Iterate()
       PrimeEntry& entry = *p_prime_entry; //entry is the current object on the list
 
       //reference first prime value                                                          
-      unsigned long int iterations = 100000;                                                                             
+      unsigned long int iterations = 1000000;                                                                             
       
 
       entry.setDone(entry.factor(iterations));
