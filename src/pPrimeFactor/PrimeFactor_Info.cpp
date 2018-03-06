@@ -20,11 +20,11 @@ void showSynopsis()
 {
   blk("SYNOPSIS:                                                       ");
   blk("------------------------------------                            ");
-  blk("  The pPrimeFactor application is used for               ");
-  blk("                                                                ");
-  blk("                                                                ");
-  blk("                                                                ");
-  blk("                                                                ");
+  blk("  The pPrimeFactor application allows the user to               ");
+  blk("  input multiple integers and have a list of their prime factors");
+  blk("  calculated. The application does not get 'bogged down' by large");
+  blk("  numbers, it instead is able to calculate small numbers rapidly,");
+  blk("  in-between calculation of prime factors of larger numbers.     ");
 }
 
 //----------------------------------------------------------------
@@ -73,7 +73,8 @@ void showExampleConfigAndExit()
   blk("{                                                               ");
   blk("  AppTick   = 4                                                 ");
   blk("  CommsTick = 4                                                 ");
-  blk("                                                                ");
+  blk("  OUTGOING_VAR = RESULT                                     ");
+  blk("  INCOMING_VAR = NUM_VALUE                                     ");
   blk("}                                                               ");
   blk("                                                                ");
   exit(0);
@@ -94,13 +95,17 @@ void showInterfaceAndExit()
   blk("                                                                ");
   blk("SUBSCRIPTIONS:                                                  ");
   blk("------------------------------------                            ");
-  blk("  NODE_MESSAGE = src_node=alpha,dest_node=bravo,var_name=FOO,   ");
-  blk("                 string_val=BAR                                 ");
+  blk("  NUM_VALUE is the input value that gets its prime factors calculated.   ");
+  blk("  NUM_VALUE is of type string.                                 ");
   blk("                                                                ");
   blk("PUBLICATIONS:                                                   ");
   blk("------------------------------------                            ");
-  blk("  Publications are determined by the node message content.      ");
-  blk("                                                                ");
+  blk("  NUM_OUT is the received number, as a double      ");
+  blk("  NUM_RESULT is the received number as a string with its status as even/odd after ");  
+  blk("  RESULT is a string containging the received number, orig, the order in which it was received, ");
+  blk("  the order in which it was calculated, the solve time, the list of prime factors, and the username. ");
+  
+
   exit(0);
 }
 
