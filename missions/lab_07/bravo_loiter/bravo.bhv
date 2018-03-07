@@ -13,16 +13,12 @@ Behavior = BHV_Loiter
    // ---------------------------
    name         = transit               // example
    pwt          = 100                   // default
-//   condition    = MODE = LOITERING       // example
    condition    = DEPLOY = true
    condition    = RETURN = false
    updates      = LOITER_UPDATES        // example
    endflag	= RETURN = true
-   endflag 	= DEPLOY = false
-   endflag 	= MISSION = complete
    activeflag	= MISSION_ACTIVE = active
 
-   //duration 	= 150
 
    // Parameters specific to this behavior
    // ------------------------------------
@@ -46,7 +42,7 @@ Behavior = BHV_Loiter
         visual_hints = nextpt_vertex_size = 5       // default
         visual_hints = label        = zone3         // example
 
-            duration = 100
+            duration = 150
      duration_status = DURATION_STATUS
  duration_idle_decay = true
            perpetual = false
