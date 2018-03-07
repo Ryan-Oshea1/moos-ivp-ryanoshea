@@ -199,6 +199,8 @@ ProcessConfig = pMarineViewer
   right_context[return] = DEPLOY=true
   right_context[return] = MOOS_MANUAL_OVERRIDE=false
   right_context[return] = RETURN=false
+  scope = MISSION_ACTIVE
+  scope = DURATION_STATUS
   scope = MODE
   scope  = RETURN
   scope  = WPT_STAT
