@@ -108,27 +108,27 @@ bool CommunicationAngle::OnNewMail(MOOSMSG_LIST &NewMail)
      m_nav_speed = dval;
    }
 
-  if( key == "'collaborator'_NAV_X"  )
+  if( key == "collaborator_NAV_X"  )
    {
      m_c_nav_x = dval;
    }
 
-  if( key == "'collaborator'_NAV_Y"  )
+  if( key == "collaborator_NAV_Y"  )
    {
      m_c_nav_y = dval;
    }
 
-  if( key == "'collaborator'_NAV_DEPTH"  )
+  if( key == "collaborator_NAV_DEPTH"  )
    {
      m_c_nav_depth = dval;
    }
 
-  if( key == "'collaborator'_NAV_HEADING"  )
+  if( key == "collaborator_NAV_HEADING"  )
    {
      m_c_nav_heading = dval;
    }
 
-   if( key == "'collaborator'_NAV_SPEED" )  
+   if( key == "collaborator_NAV_SPEED" )  
    {
      m_c_nav_speed = dval;
    }
@@ -158,8 +158,73 @@ bool CommunicationAngle::OnConnectToServer()
 
 bool CommunicationAngle::Iterate()
 {
+
+  //  m_surface_sound_speed = 1480; //meter per second                                                                             
+  // m_sound_speed_gradient = .0016; // meter per second per meter  
+  uint64_t f_launch_angle = 1; //deg to rad
+  double f_local_angle = f_launch_angle; 
+  double f_sound_speed_depth = m_surface_sound_speed + m_sound_speed_gradient * m_nav_depth;
+  double f_R = f_sound_speed_depth /(m_sound_speed_gradient * cos(f_launch_angle));
+  double f_s = f_R * (f_launch_angle - f_local_angle) ;       
+  //  double f_r_s = f_R * [sin(f_launch_angle) + sin(f_s/f_R - f_launch_angle)];
+  //double f_z_s = f_R * cos(f_s/f_R) - m_surface_sound_speed/m_sound_speed_gradient;
+  double f_distance_between_2_D = pow((m_nav_x - m_c_nav_x),2) + pow((m_nav_y - m_c_nav_y),2);
+  //  Notify("PATH_EXISTS", "iterate");
+  //double i = 1;
+  for(double i=1;i<90; i++)
+	{
+	  //      f_s = f_R * (f_launch_angle - f_local_angle) ;                                                                   
+	  //f_r_s = f_R * [sin(f_launch_angle) + sin(f_s/f_R - f_launch_angle)];                                                   
+	  //f_z_s = f_R * cos(f_s/f_R) - m_surface_sound_speed/m_sound_speed_gradient;                                           
+	  //  Notify("PATH_EXISTS", "in for loop");
   
-  Notify("ACOUSTIC_PATH", "elev_angle= , transmission_loss= , id=oshea1@mit.edu");
+	  f_R = f_sound_speed_depth /(m_sound_speed_gradient * cos(f_launch_angle));
+	  f_launch_angle = f_launch_angle + i;
+	  // if the collaborator is above you (less depth) or on the same plane
+	  if(m_nav_depth >= m_c_nav_depth )
+	    {
+	      //		  Notify("PATH_EXISTS", "in above loop");
+	      //if the difference between is less than 5 meters
+	      if( (f_R*2 - f_distance_between_2_D) < 5 ) 
+		{
+		  Notify("PATH_EXISTS", "true above");
+		}
+	    }
+	  // if the collaborator is below you 
+	if(m_nav_depth < m_c_nav_depth )
+	  {
+	    //		  Notify("PATH_EXISTS", "in below loop");	    
+	    double f_x_difference_2_D = m_c_nav_x - m_nav_x;
+	    double f_y_difference_2_D = m_c_nav_y - m_nav_x;
+	    
+	    double f_x_unit_vector = f_x_difference_2_D/f_distance_between_2_D;
+	    double f_y_unit_vector = f_y_difference_2_D/f_distance_between_2_D;
+	    
+	    double f_circle_center_x = m_nav_x + f_x_unit_vector*f_R;
+	    double f_circle_center_y = m_nav_y + f_y_unit_vector*f_R;
+	    double f_depth_difference = m_c_nav_depth - m_nav_depth;
+ 
+	    double f_distance_from_circle_center_to_c = sqrt(pow((f_circle_center_x - m_c_nav_x),2) + pow((f_circle_center_y - m_c_nav_y),2) + pow((f_depth_difference),2));
+	    Notify("DIST_DIFF",(f_R) - (f_distance_from_circle_center_to_c)); 
+            Notify("F_SOUND_SPEED_DEPTH",(f_sound_speed_depth)); 
+
+            Notify("M_SOUND_SPEED_GRADIENT",(m_sound_speed_gradient)); 
+            Notify("F_LAUNCH_ANGLE",(f_launch_angle)); 
+ 
+	    Notify("f_R",(f_R));
+            Notify("center_to_center_dist",(f_distance_from_circle_center_to_c));
+
+	    if( (f_R) - (f_distance_from_circle_center_to_c) < 5 )
+	      {
+		Notify("PATH_EXISTS", "true below");
+	      }
+	    
+	  }
+	}
+
+
+      //  Notify("ACOUSTIC_PATH", "elev_angle= , transmission_loss= , id=oshea1@mit.edu");
+  Notify("ACOUSTIC_PATH", m_c_nav_x);
   Notify("CONNECTIVITY_LOCATION", "x= , y= , depth= , id=oshea1@mit.edu");
   return(true);
 }
@@ -205,10 +270,10 @@ void CommunicationAngle::RegisterVariables()
   Register("NAV_DEPTH", 0);  
   Register("NAV_HEADING", 0);  
   Register("NAV_SPEED", 0);  
-  Register("'collaborator'_NAV_X", 0);  
-  Register("'collaborator'_NAV_Y", 0);  
-  Register("'collaborator'_NAV_DEPTH", 0);  
-  Register("'collaborator'_NAV_HEADING", 0);  
-  Register("'collaborator'_NAV_SPEED", 0);  
+  Register("collaborator_NAV_X", 0);  
+  Register("collaborator_NAV_Y", 0);  
+  Register("collaborator_NAV_DEPTH", 0);  
+  Register("collaborator_NAV_HEADING", 0);  
+  Register("collaborator_NAV_SPEED", 0);  
 }
 
