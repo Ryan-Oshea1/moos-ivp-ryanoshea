@@ -1,0 +1,630 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% LOG FILE:       ./MOOSLog_15_3_2018_____13_14_37/MOOSLog_15_3_2018_____13_14_37.alog
+%% FILE OPENED ON  Wed Dec 31 19:00:00 1969
+%% LOGSTART               1521134076.97
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+0.608           LOGGER_DIRECTORY     pLogger         ./MOOSLog_15_3_2018_____13_14_37 
+0.705           DB_EVENT             MOOSDB_pears    connected=pShare 
+0.810           PLOGGER_STATUS       pLogger         AppErrorFlag=false,Uptime=0.810352,cpuload=0.6203,memory_kb=1140,memory_max_kb=1140,MOOSName=pLogger,Publishing="LOGGER_DIRECTORY,",Subscribing="LOGGER_RESTART,MOOS_DEBUG,MOOS_SYSTEM,PLOGGER_CMD,",LogAuxSrc=false 
+1.284           PSHARE_STATUS        pShare          AppErrorFlag=false,Uptime=0.685434,cpuload=0.8863,memory_kb=1172,memory_max_kb=1172,MOOSName=pShare,Publishing="",Subscribing="PEARS,PSHARE_CMD," 
+2.019           DB_TIME              MOOSDB_pears    1521134078.99205 
+2.019           DB_UPTIME            MOOSDB_pears    2.23120      
+2.019           DB_CLIENTS           MOOSDB_pears    pShare,pLogger, 
+2.019           DB_VARSUMMARY        MOOSDB_pears    DB_CLIENTS           13:14:38.992         MOOSDB_pears         0.0 Hz S  pShare,pLogger,     
+DB_EVENT             13:14:37.677         MOOSDB_pears         0.8 Hz S  connected=pShare    
+DB_QOS               13:14:36.760         MOOSDB#1             0.0 Hz S                      
+DB_RWSUMMARY         13:14:36.760         MOOSDB#1             0.0 Hz S                      
+DB_TIME              13:14:38.992         MOOSDB_pears         0.0 Hz D  1521134079.0         
+DB_UPTIME            13:14:38.992         MOOSDB_pears         0.0 Hz D  2.2                  
+DB_VARSUMMARY        13:14:36.760         MOOSDB#1             0.0 Hz S                      
+LOGGER_DIRECTORY     13:14:37.581         pLogger              0.0 Hz S  ./MOOSLog_15_3_2018___...
+LOGGER_RESTART       18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_DEBUG           18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_SYSTEM          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS                18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_CMD          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_STATUS       13:14:37.783         pLogger              0.0 Hz S  AppErrorFlag=false,Upt...
+PSHARE_CMD           18:59:59.000         (write pending)      0.0 Hz ~  
+                   PSHARE_STATUS        13:14:38.257         pShare               0.0 Hz S  AppErrorFlag=false,Upt...
+ 
+2.019           DB_QOS               MOOSDB_pears    pLogger=0:0.13113:0.124931:0,pShare=0:0.29397:0.29397:0, 
+2.019           DB_RWSUMMARY         MOOSDB_pears    pShare=PEARS:PSHARE_CMD&PSHARE_STATUS,pLogger=DB_CLIENTS:DB_EVENT:DB_QOS:DB_RWSUMMARY:DB_TIME:DB_UPTIME:DB_VARSUMMARY:LOGGER_DIRECTORY:LOGGER_RESTART:MOOS_DEBUG:MOOS_SYSTEM:PLOGGER_CMD:PLOGGER_STATUS&LOGGER_DIRECTORY:PLOGGER_STATUS 
+2.822           PLOGGER_STATUS       pLogger         AppErrorFlag=false,Uptime=2.82154,cpuload=0.1413,memory_kb=1392,memory_max_kb=1392,MOOSName=pLogger,Publishing="LOGGER_DIRECTORY,PLOGGER_STATUS,",Subscribing="DB_CLIENTS,DB_EVENT,DB_QOS,DB_RWSUMMARY,DB_TIME,DB_UPTIME,DB_VARSUMMARY,LOGGER_DIRECTORY,LOGGER_RESTART,MOOS_DEBUG,MOOS_SYSTEM,PEARS,PLOGGER_CMD,PLOGGER_STATUS,PSHARE_CMD,PSHARE_STATUS,",LogAuxSrc=false 
+3.300           PSHARE_STATUS        pShare          AppErrorFlag=false,Uptime=2.70083,cpuload=0.132,memory_kb=1376,memory_max_kb=1376,MOOSName=pShare,Publishing="PSHARE_INPUT_SUMMARY,PSHARE_OUTPUT_SUMMARY,PSHARE_STATUS,",Subscribing="PEARS,PSHARE_CMD," 
+3.300           PSHARE_OUTPUT_SUMMARY pShare          PEARS->PEARS:localhost:9200 
+3.300           PSHARE_INPUT_SUMMARY pShare          localhost:9201 
+4.305           PSHARE_OUTPUT_SUMMARY pShare          PEARS->PEARS:localhost:9200 
+4.305           PSHARE_INPUT_SUMMARY pShare          localhost:9201 
+4.305           DB_TIME              MOOSDB_pears    1521134081.27826 
+4.305           DB_UPTIME            MOOSDB_pears    4.51742      
+4.305           DB_CLIENTS           MOOSDB_pears    pShare,pLogger, 
+4.305           DB_VARSUMMARY        MOOSDB_pears    DB_CLIENTS           13:14:41.278         MOOSDB_pears         0.2 Hz S  pShare,pLogger,     
+DB_EVENT             13:14:37.677         MOOSDB_pears         0.8 Hz S  connected=pShare    
+DB_QOS               13:14:38.992         MOOSDB_pears         0.0 Hz S  pLogger=0:0.13113:0.12...
+DB_RWSUMMARY         13:14:38.992         MOOSDB_pears         0.0 Hz S  pShare=PEARS:PSHARE_CM...
+DB_TIME              13:14:41.278         MOOSDB_pears         0.2 Hz D  1521134081.3         
+DB_UPTIME            13:14:41.278         MOOSDB_pears         0.2 Hz D  4.5                  
+DB_VARSUMMARY        13:14:38.992         MOOSDB_pears         0.0 Hz S  DB_CLIENTS           1...
+LOGGER_DIRECTORY     13:14:37.581         pLogger              0.0 Hz S  ./MOOSLog_15_3_2018___...
+LOGGER_RESTART       18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_DEBUG           18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_SYSTEM          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS                18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_CMD          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_STATUS       13:14:39.794         pLogger              0.2 Hz S  AppErrorFlag=false,Upt...
+PSHARE_CMD           18:59:59.000         (write pending)      0.0 Hz ~  
+                   PSHARE_INPUT_SUMMARY 13:14:40.273         pShare               0.5 Hz S  localhost:9201      
+PSHARE_OUTPUT_SUMMARY 13:14:40.273         pShare               0.5 Hz S  PEARS->PEARS:localhost...
+PSHARE_STATUS        13:14:40.273         pShare               0.2 Hz S  AppErrorFlag=false,Upt...
+ 
+4.305           DB_QOS               MOOSDB_pears    pLogger=0:0.13113:0.108957:0,pShare=0:0.29397:0.129938:0, 
+4.305           DB_RWSUMMARY         MOOSDB_pears    pShare=PEARS:PSHARE_CMD&PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:PSHARE_STATUS,pLogger=DB_CLIENTS:DB_EVENT:DB_QOS:DB_RWSUMMARY:DB_TIME:DB_UPTIME:DB_VARSUMMARY:LOGGER_DIRECTORY:LOGGER_RESTART:MOOS_DEBUG:MOOS_SYSTEM:PEARS:PLOGGER_CMD:PLOGGER_STATUS:PSHARE_CMD:PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:PSHARE_STATUS&LOGGER_DIRECTORY:PLOGGER_STATUS 
+4.849           PLOGGER_STATUS       pLogger         AppErrorFlag=false,Uptime=4.84895,cpuload=0.1416,memory_kb=1392,memory_max_kb=1392,MOOSName=pLogger,Publishing="LOGGER_DIRECTORY,PLOGGER_STATUS,",Subscribing="DB_CLIENTS,DB_EVENT,DB_QOS,DB_RWSUMMARY,DB_TIME,DB_UPTIME,DB_VARSUMMARY,LOGGER_DIRECTORY,LOGGER_RESTART,MOOS_DEBUG,MOOS_SYSTEM,PEARS,PLOGGER_CMD,PLOGGER_STATUS,PSHARE_CMD,PSHARE_INPUT_SUMMARY,PSHARE_OUTPUT_SUMMARY,PSHARE_STATUS,",LogAuxSrc=false 
+5.318           PSHARE_STATUS        pShare          AppErrorFlag=false,Uptime=4.71955,cpuload=0.1971,memory_kb=1408,memory_max_kb=1408,MOOSName=pShare,Publishing="PSHARE_INPUT_SUMMARY,PSHARE_OUTPUT_SUMMARY,PSHARE_STATUS,",Subscribing="PEARS,PSHARE_CMD," 
+5.318           PSHARE_OUTPUT_SUMMARY pShare          PEARS->PEARS:localhost:9200 
+5.318           PSHARE_INPUT_SUMMARY pShare          localhost:9201 
+6.331           DB_TIME              MOOSDB_pears    1521134083.30381 
+6.331           DB_UPTIME            MOOSDB_pears    6.54296      
+6.331           DB_CLIENTS           MOOSDB_pears    pShare,pLogger, 
+6.331           DB_VARSUMMARY        MOOSDB_pears    DB_CLIENTS           13:14:43.303         MOOSDB_pears         0.4 Hz S  pShare,pLogger,     
+DB_EVENT             13:14:37.677         MOOSDB_pears         0.8 Hz S  connected=pShare    
+DB_QOS               13:14:41.278         MOOSDB_pears         0.2 Hz S  pLogger=0:0.13113:0.10...
+DB_RWSUMMARY         13:14:41.278         MOOSDB_pears         0.2 Hz S  pShare=PEARS:PSHARE_CM...
+DB_TIME              13:14:43.303         MOOSDB_pears         0.4 Hz D  1521134083.3         
+DB_UPTIME            13:14:43.303         MOOSDB_pears         0.4 Hz D  6.5                  
+DB_VARSUMMARY        13:14:41.278         MOOSDB_pears         0.2 Hz S  DB_CLIENTS           1...
+LOGGER_DIRECTORY     13:14:37.581         pLogger              0.0 Hz S  ./MOOSLog_15_3_2018___...
+LOGGER_RESTART       18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_DEBUG           18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_SYSTEM          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS                18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_CMD          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_STATUS       13:14:41.822         pLogger              0.4 Hz S  AppErrorFlag=false,Upt...
+PSHARE_CMD           18:59:59.000         (write pending)      0.0 Hz ~  
+                   PSHARE_INPUT_SUMMARY 13:14:42.291         pShare               0.9 Hz S  localhost:9201      
+PSHARE_OUTPUT_SUMMARY 13:14:42.291         pShare               0.9 Hz S  PEARS->PEARS:localhost...
+PSHARE_STATUS        13:14:42.291         pShare               0.4 Hz S  AppErrorFlag=false,Upt...
+ 
+6.331           DB_QOS               MOOSDB_pears    pLogger=0.200987:0.200987:0.108957:0.136566,pShare=0.257015:0.29397:0.105858:0.219393, 
+6.331           DB_RWSUMMARY         MOOSDB_pears    pShare=PEARS:PSHARE_CMD&PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:PSHARE_STATUS,pLogger=DB_CLIENTS:DB_EVENT:DB_QOS:DB_RWSUMMARY:DB_TIME:DB_UPTIME:DB_VARSUMMARY:LOGGER_DIRECTORY:LOGGER_RESTART:MOOS_DEBUG:MOOS_SYSTEM:PEARS:PLOGGER_CMD:PLOGGER_STATUS:PSHARE_CMD:PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:PSHARE_STATUS&LOGGER_DIRECTORY:PLOGGER_STATUS 
+6.342           PSHARE_OUTPUT_SUMMARY pShare          PEARS->PEARS:localhost:9200 
+6.342           PSHARE_INPUT_SUMMARY pShare          localhost:9201 
+6.874           PLOGGER_STATUS       pLogger         AppErrorFlag=false,Uptime=6.87441,cpuload=0.1405,memory_kb=1396,memory_max_kb=1396,MOOSName=pLogger,Publishing="LOGGER_DIRECTORY,PLOGGER_STATUS,",Subscribing="DB_CLIENTS,DB_EVENT,DB_QOS,DB_RWSUMMARY,DB_TIME,DB_UPTIME,DB_VARSUMMARY,LOGGER_DIRECTORY,LOGGER_RESTART,MOOS_DEBUG,MOOS_SYSTEM,PEARS,PLOGGER_CMD,PLOGGER_STATUS,PSHARE_CMD,PSHARE_INPUT_SUMMARY,PSHARE_OUTPUT_SUMMARY,PSHARE_STATUS,",LogAuxSrc=false 
+7.266           DB_EVENT             MOOSDB_pears    connected=pXRelay_PEARS 
+7.345           PSHARE_STATUS        pShare          AppErrorFlag=false,Uptime=6.74631,cpuload=0.182,memory_kb=1440,memory_max_kb=1440,MOOSName=pShare,Publishing="PSHARE_INPUT_SUMMARY,PSHARE_OUTPUT_SUMMARY,PSHARE_STATUS,",Subscribing="PEARS,PSHARE_CMD," 
+7.345           PSHARE_OUTPUT_SUMMARY pShare          PEARS->PEARS:localhost:9200 
+7.345           PSHARE_INPUT_SUMMARY pShare          localhost:9201 
+7.370           DB_EVENT             MOOSDB_pears    connected=uXMS_900 
+8.348           DB_TIME              MOOSDB_pears    1521134085.32095 
+8.348           DB_UPTIME            MOOSDB_pears    8.56010      
+8.348           DB_CLIENTS           MOOSDB_pears    uXMS_900,pXRelay_PEARS,pShare,pLogger, 
+8.348           DB_VARSUMMARY        MOOSDB_pears    APPCAST              13:14:45.102         uXMS_900             0.0 Hz S  proc=uXMS_900!@#iter=1...
+APPCAST_REQ          18:59:59.000         (write pending)      0.0 Hz ~  
+                   APPLES               18:59:59.000         (write pending)      0.0 Hz ~  
+                   APPLES_ITER_HZ       18:59:59.000         (write pending)      0.0 Hz ~  
+                   APPLES_POST_HZ       18:59:59.000         (write pending)      0.0 Hz ~  
+                   DB_CLIENTS           13:14:45.320         MOOSDB_pears         0.4 Hz S  uXMS_900,pXRelay_PEARS...
+DB_EVENT             13:14:44.343         MOOSDB_pears         0.5 Hz S  connected=uXMS_900  
+DB_QOS               13:14:43.303         MOOSDB_pears         0.4 Hz S  pLogger=0.200987:0.200...
+DB_RWSUMMARY         13:14:43.304         MOOSDB_pears         0.4 Hz S  pShare=PEARS:PSHARE_CM...
+DB_TIME              13:14:45.320         MOOSDB_pears         0.4 Hz D  1521134085.3         
+DB_UPTIME            13:14:45.320         MOOSDB_pears         0.4 Hz D  8.6                  
+DB_VARSUMMARY        13:14:43.303         MOOSDB_pears         0.4 Hz S  DB_CLIENTS           1...
+LOGGER_DIRECTORY     13:14:37.581         pLogger              0.0 Hz S  ./MOOSLog_15_3_2018___...
+LOGGER_RESTART       18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_DEBUG           18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_SYSTEM          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS                18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS_ITER_HZ        18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS_POST_HZ        18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_CMD          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_STATUS       13:14:43.847         pLogger              0.4 Hz S  AppErrorFlag=false,Upt...
+PSHARE_CMD           18:59:59.000         (write pending)      0.0 Hz ~  
+                   PSHARE_INPUT_SUMMARY 13:14:44.318         pShare               1.0 Hz S  localhost:9201      
+PSHARE_OUTPUT_SUMMARY 13:14:44.318         pShare               1.0 Hz S  PEARS->PEARS:localhost...
+PSHARE_STATUS        13:14:44.318         pShare               0.4 Hz S  AppErrorFlag=false,Upt...
+PXOUT                18:59:59.000         (write pending)      0.0 Hz ~  
+                   UXMS_900_ITER_GAP    13:14:45.302         uXMS_900             0.0 Hz D  1.0                  
+UXMS_900_ITER_LEN    13:14:45.302         uXMS_900             0.0 Hz D  0.0                  
+UXMS_900_STATUS      13:14:45.102         uXMS_900             0.0 Hz S  AppErrorFlag=false,Upt...
+ 
+8.348           DB_QOS               MOOSDB_pears    pLogger=0.142097:0.200987:0.108957:0.124788,pShare=0.242949:0.29397:0.105858:0.216579,pXRelay_PEARS=0:0.267029:0.267029:0,uXMS_900=0:0.226974:0.226974:0, 
+8.348           DB_RWSUMMARY         MOOSDB_pears    uXMS_900=APPCAST_REQ:APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:DB_UPTIME:PEARS:PEARS_ITER_HZ:PEARS_POST_HZ:PXOUT&APPCAST:UXMS_900_ITER_GAP:UXMS_900_ITER_LEN:UXMS_900_STATUS,pXRelay_PEARS=PEARS&,pShare=PEARS:PSHARE_CMD&PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:PSHARE_STATUS,pLogger=APPCAST_REQ:APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:DB_CLIENTS:DB_EVENT:DB_QOS:DB_RWSUMMARY:DB_TIME:DB_UPTIME:DB_VARSUMMARY:LOGGER_DIRECTORY:LOGGER_RESTART:MOOS_DEBUG:MOOS_SYSTEM:PEARS:PEARS_ITER_HZ:PEARS_POST_HZ:PLOGGER_CMD:PLOGGER_STATUS:PSHARE_CMD:PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:PSHARE_STATUS:PXOUT&LOGGER_DIRECTORY:PLOGGER_STATUS 
+8.371           PSHARE_OUTPUT_SUMMARY pShare          PEARS->PEARS:localhost:9200 
+8.371           PSHARE_INPUT_SUMMARY pShare          localhost:9201 
+8.903           PLOGGER_STATUS       pLogger         AppErrorFlag=false,Uptime=8.90257,cpuload=0.2991,memory_kb=1436,memory_max_kb=1436,MOOSName=pLogger,Publishing="LOGGER_DIRECTORY,PLOGGER_STATUS,",Subscribing="APPCAST_REQ,APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,DB_CLIENTS,DB_EVENT,DB_QOS,DB_RWSUMMARY,DB_TIME,DB_UPTIME,DB_VARSUMMARY,LOGGER_DIRECTORY,LOGGER_RESTART,MOOS_DEBUG,MOOS_SYSTEM,PEARS,PEARS_ITER_HZ,PEARS_POST_HZ,PLOGGER_CMD,PLOGGER_STATUS,PSHARE_CMD,PSHARE_INPUT_SUMMARY,PSHARE_OUTPUT_SUMMARY,PSHARE_STATUS,PXOUT,",LogAuxSrc=false 
+8.129           UXMS_900_STATUS      uXMS_900        AppErrorFlag=false,Uptime=0.966192,cpuload=1.137,memory_kb=1176,memory_max_kb=1176,MOOSName=uXMS_900,Publishing="",Subscribing="APPCAST_REQ,APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,DB_UPTIME,PEARS,PEARS_ITER_HZ,PEARS_POST_HZ,PXOUT," 
+8.129           APPCAST              uXMS_900        proc=uXMS_900!@#iter=1!@#node=pears!@#iter=1!@#messages=VarName         (S)ource  (T)ime  (C)ommunity  VarValue (SCOPING:[7;32mEVENTS[0m)!@--------------  --------  ------  -----------  -------------------------!@APPLES           n/a       n/a                 n/a!@APPLES_ITER_HZ   n/a       n/a                 n/a!@APPLES_POST_HZ   n/a       n/a                 n/a!@PEARS            n/a       n/a                 n/a!@PEARS_ITER_HZ    n/a       n/a                 n/a!@PEARS_POST_HZ    n/a       n/a                 n/a!@PXOUT            n/a       n/a                 n/a!@!@#config_warnings=Unhandled config line: PAUSED parameter deprecated, use REFRESH_MODE instead!@#events_total=0!@#!@#run_warning_total=0!@# 
+8.769           PXRELAY_PEARS_STATUS pXRelay_PEARS   AppErrorFlag=false,Uptime=1.60951,cpuload=0.05581,memory_kb=1208,memory_max_kb=1208,MOOSName=pXRelay_PEARS,Publishing="",Subscribing="PEARS," 
+9.345           UXMS_900_ITER_GAP    uXMS_900        1.02491      
+9.345           UXMS_900_ITER_LEN    uXMS_900        0.00021      
+9.366           PSHARE_STATUS        pShare          AppErrorFlag=false,Uptime=8.76695,cpuload=0.1998,memory_kb=1476,memory_max_kb=1476,MOOSName=pShare,Publishing="PSHARE_INPUT_SUMMARY,PSHARE_OUTPUT_SUMMARY,PSHARE_STATUS,",Subscribing="PEARS,PSHARE_CMD," 
+9.396           PSHARE_OUTPUT_SUMMARY pShare          PEARS->PEARS:localhost:9200 
+9.396           PSHARE_INPUT_SUMMARY pShare          localhost:9201 
+9.550           UXMS_900_ITER_GAP    uXMS_900        1.02602      
+9.550           UXMS_900_ITER_LEN    uXMS_900        0.00018      
+9.752           UXMS_900_ITER_GAP    uXMS_900        1.00930      
+9.752           UXMS_900_ITER_LEN    uXMS_900        0.00023      
+9.772           APPLES_ITER_HZ       pXRelay_PEARS   1.99325      
+9.955           UXMS_900_ITER_GAP    uXMS_900        1.01474      
+9.955           UXMS_900_ITER_LEN    uXMS_900        0.00018      
+10.114          LOGGER_DIRECTORY     pLogger         ./MOOSLog_15_3_2018_____13_14_37 
+10.161          UXMS_900_STATUS      uXMS_900        AppErrorFlag=false,Uptime=2.99825,cpuload=0.138,memory_kb=1416,memory_max_kb=1416,MOOSName=uXMS_900,Publishing="APPCAST,UXMS_900_ITER_GAP,UXMS_900_ITER_LEN,UXMS_900_STATUS,",Subscribing="APPCAST_REQ,APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,DB_UPTIME,PEARS,PEARS_ITER_HZ,PEARS_POST_HZ,PXOUT," 
+10.161          UXMS_900_ITER_GAP    uXMS_900        1.02831      
+10.161          UXMS_900_ITER_LEN    uXMS_900        0.00005      
+10.362          UXMS_900_ITER_GAP    uXMS_900        1.00350      
+10.362          UXMS_900_ITER_LEN    uXMS_900        0.00023      
+10.362          DB_TIME              MOOSDB_pears    1521134087.33482 
+10.362          DB_UPTIME            MOOSDB_pears    10.57397     
+10.362          DB_CLIENTS           MOOSDB_pears    uXMS_900,pXRelay_PEARS,pShare,pLogger, 
+10.362          DB_VARSUMMARY        MOOSDB_pears    APPCAST              13:14:45.102         uXMS_900             0.0 Hz S  proc=uXMS_900!@#iter=1...
+APPCAST_REQ          18:59:59.000         (write pending)      0.0 Hz ~  
+                   APPLES               18:59:59.000         (write pending)      0.0 Hz ~  
+                   APPLES_ITER_HZ       13:14:46.745         pXRelay_PEARS        0.0 Hz D  2.0                  
+APPLES_POST_HZ       18:59:59.000         (write pending)      0.0 Hz ~  
+                   DB_CLIENTS           13:14:47.334         MOOSDB_pears         0.5 Hz S  uXMS_900,pXRelay_PEARS...
+DB_EVENT             13:14:44.343         MOOSDB_pears         0.5 Hz S  connected=uXMS_900  
+DB_QOS               13:14:45.321         MOOSDB_pears         0.4 Hz S  pLogger=0.142097:0.200...
+DB_RWSUMMARY         13:14:45.321         MOOSDB_pears         0.4 Hz S  uXMS_900=APPCAST_REQ:A...
+DB_TIME              13:14:47.334         MOOSDB_pears         0.5 Hz D  1521134087.3         
+DB_UPTIME            13:14:47.334         MOOSDB_pears         0.5 Hz D  10.6                 
+DB_VARSUMMARY        13:14:45.321         MOOSDB_pears         0.4 Hz S  APPCAST              1...
+LOGGER_DIRECTORY     13:14:47.086         pLogger              0.1 Hz S  ./MOOSLog_15_3_2018___...
+LOGGER_RESTART       18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_DEBUG           18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_SYSTEM          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS                18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS_ITER_HZ        18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS_POST_HZ        18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_CMD          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_STATUS       13:14:45.876         pLogger              0.5 Hz S  AppErrorFlag=false,Upt...
+PSHARE_CMD           18:59:59.000         (write pending)      0.0 Hz ~  
+                   PSHARE_INPUT_SUMMARY 13:14:46.369         pShare               1.0 Hz S  localhost:9201      
+PSHARE_OUTPUT_SUMMARY 13:14:46.369         pShare               1.0 Hz S  PEARS->PEARS:localhost...
+PSHARE_STATUS        13:14:46.339         pShare               0.5 Hz S  AppErrorFlag=false,Upt...
+PXOUT                18:59:59.000         (write pending)      0.0 Hz ~  
+                   PXRELAY_PEARS_STATUS 13:14:45.742         pXRelay_PEARS        0.0 Hz S  AppErrorFlag=false,Upt...
+UXMS_900_ITER_GAP    13:14:47.334         uXMS_900             4.3 Hz D  1.0                  
+UXMS_900_ITER_LEN    13:14:47.134         uXMS_900             4.3 Hz D  0.0                  
+UXMS_900_STATUS      13:14:47.134         uXMS_900             0.2 Hz S  AppErrorFlag=false,Upt...
+ 
+10.362          DB_QOS               MOOSDB_pears    pLogger=0.340939:0.340939:0.108957:0.164557,pShare=0.258923:0.29397:0.105858:0.219774,pXRelay_PEARS=0:0.267029:0.194073:0,uXMS_900=0:0.226974:0.195026:0, 
+10.362          DB_RWSUMMARY         MOOSDB_pears    uXMS_900=APPCAST_REQ:APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:DB_UPTIME:PEARS:PEARS_ITER_HZ:PEARS_POST_HZ:PXOUT&APPCAST:UXMS_900_ITER_GAP:UXMS_900_ITER_LEN:UXMS_900_STATUS,pXRelay_PEARS=PEARS&APPLES_ITER_HZ:PXRELAY_PEARS_STATUS,pShare=PEARS:PSHARE_CMD&PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:PSHARE_STATUS,pLogger=APPCAST:APPCAST_REQ:APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:DB_CLIENTS:DB_EVENT:DB_QOS:DB_RWSUMMARY:DB_TIME:DB_UPTIME:DB_VARSUMMARY:LOGGER_DIRECTORY:LOGGER_RESTART:MOOS_DEBUG:MOOS_SYSTEM:PEARS:PEARS_ITER_HZ:PEARS_POST_HZ:PLOGGER_CMD:PLOGGER_STATUS:PSHARE_CMD:PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:PSHARE_STATUS:PXOUT:PXRELAY_PEARS_STATUS:UXMS_900_ITER_GAP:UXMS_900_ITER_LEN:UXMS_900_STATUS&LOGGER_DIRECTORY:PLOGGER_STATUS 
+10.398          PSHARE_OUTPUT_SUMMARY pShare          PEARS->PEARS:localhost:9200 
+10.398          PSHARE_INPUT_SUMMARY pShare          localhost:9201 
+10.562          UXMS_900_ITER_GAP    uXMS_900        1.00406      
+10.562          UXMS_900_ITER_LEN    uXMS_900        0.00018      
+10.762          UXMS_900_ITER_GAP    uXMS_900        1.00049      
+10.762          UXMS_900_ITER_LEN    uXMS_900        0.00017      
+10.773          PXRELAY_PEARS_STATUS pXRelay_PEARS   AppErrorFlag=false,Uptime=3.61344,cpuload=0.04345,memory_kb=1256,memory_max_kb=1256,MOOSName=pXRelay_PEARS,Publishing="APPLES_ITER_HZ,PXRELAY_PEARS_STATUS,",Subscribing="PEARS," 
+10.773          APPLES_ITER_HZ       pXRelay_PEARS   1.49705      
+10.929          PLOGGER_STATUS       pLogger         AppErrorFlag=false,Uptime=10.9291,cpuload=0.2912,memory_kb=1488,memory_max_kb=1488,MOOSName=pLogger,Publishing="LOGGER_DIRECTORY,PLOGGER_STATUS,",Subscribing="APPCAST,APPCAST_REQ,APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,DB_CLIENTS,DB_EVENT,DB_QOS,DB_RWSUMMARY,DB_TIME,DB_UPTIME,DB_VARSUMMARY,LOGGER_DIRECTORY,LOGGER_RESTART,MOOS_DEBUG,MOOS_SYSTEM,PEARS,PEARS_ITER_HZ,PEARS_POST_HZ,PLOGGER_CMD,PLOGGER_STATUS,PSHARE_CMD,PSHARE_INPUT_SUMMARY,PSHARE_OUTPUT_SUMMARY,PSHARE_STATUS,PXOUT,PXRELAY_PEARS_STATUS,UXMS_900_ITER_GAP,UXMS_900_ITER_LEN,UXMS_900_STATUS,",LogAuxSrc=false 
+10.963          UXMS_900_ITER_GAP    uXMS_900        1.00071      
+10.963          UXMS_900_ITER_LEN    uXMS_900        0.00013      
+11.168          UXMS_900_ITER_GAP    uXMS_900        1.02786      
+11.168          UXMS_900_ITER_LEN    uXMS_900        0.00023      
+11.371          UXMS_900_ITER_GAP    uXMS_900        1.01659      
+11.371          UXMS_900_ITER_LEN    uXMS_900        0.00025      
+11.377          PSHARE_STATUS        pShare          AppErrorFlag=false,Uptime=10.7779,cpuload=0.2039,memory_kb=1476,memory_max_kb=1476,MOOSName=pShare,Publishing="PSHARE_INPUT_SUMMARY,PSHARE_OUTPUT_SUMMARY,PSHARE_STATUS,",Subscribing="PEARS,PSHARE_CMD," 
+11.402          PSHARE_OUTPUT_SUMMARY pShare          PEARS->PEARS:localhost:9200 
+11.402          PSHARE_INPUT_SUMMARY pShare          localhost:9201 
+11.572          UXMS_900_ITER_GAP    uXMS_900        1.00067      
+11.572          UXMS_900_ITER_LEN    uXMS_900        0.00023      
+11.772          UXMS_900_ITER_GAP    uXMS_900        1.00055      
+11.772          UXMS_900_ITER_LEN    uXMS_900        0.00010      
+11.778          APPLES_ITER_HZ       pXRelay_PEARS   1.32928      
+11.974          UXMS_900_ITER_GAP    uXMS_900        1.01312      
+11.974          UXMS_900_ITER_LEN    uXMS_900        0.00016      
+12.004          DB_EVENT             MOOSDB_pears    connected=pXRelay_APPLES 
+12.175          UXMS_900_STATUS      uXMS_900        AppErrorFlag=false,Uptime=5.0126,cpuload=0.1533,memory_kb=1464,memory_max_kb=1464,MOOSName=uXMS_900,Publishing="APPCAST,UXMS_900_ITER_GAP,UXMS_900_ITER_LEN,UXMS_900_STATUS,",Subscribing="APPCAST_REQ,APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,DB_UPTIME,PEARS,PEARS_ITER_HZ,PEARS_POST_HZ,PXOUT," 
+12.175          UXMS_900_ITER_GAP    uXMS_900        1.00407      
+12.175          UXMS_900_ITER_LEN    uXMS_900        0.00004      
+12.238          DB_EVENT             MOOSDB_pears    connected=uXMS_935 
+12.375          UXMS_900_ITER_GAP    uXMS_900        1.00055      
+12.375          UXMS_900_ITER_LEN    uXMS_900        0.00020      
+12.376          DB_TIME              MOOSDB_pears    1521134089.34859 
+12.376          DB_UPTIME            MOOSDB_pears    12.58775     
+12.376          DB_CLIENTS           MOOSDB_pears    uXMS_935,pXRelay_APPLES,uXMS_900,pXRelay_PEARS,pShare,pLogger, 
+12.376          DB_VARSUMMARY        MOOSDB_pears    APPCAST              13:14:45.102         uXMS_900             0.0 Hz S  proc=uXMS_900!@#iter=1...
+APPCAST_REQ          18:59:59.000         (write pending)      0.0 Hz ~  
+                   APPLES               18:59:59.000         (write pending)      0.0 Hz ~  
+                   APPLES_ITER_HZ       13:14:48.751         pXRelay_PEARS        0.7 Hz D  1.3                  
+APPLES_POST_HZ       18:59:59.000         (write pending)      0.0 Hz ~  
+                   DB_CLIENTS           13:14:49.348         MOOSDB_pears         0.5 Hz S  uXMS_935,pXRelay_APPLE...
+DB_EVENT             13:14:49.211         MOOSDB_pears         0.5 Hz S  connected=uXMS_935  
+DB_QOS               13:14:47.334         MOOSDB_pears         0.5 Hz S  pLogger=0.340939:0.340...
+DB_RWSUMMARY         13:14:47.335         MOOSDB_pears         0.5 Hz S  uXMS_900=APPCAST_REQ:A...
+DB_TIME              13:14:49.348         MOOSDB_pears         0.5 Hz D  1521134089.3         
+DB_UPTIME            13:14:49.348         MOOSDB_pears         0.5 Hz D  12.6                 
+DB_VARSUMMARY        13:14:47.334         MOOSDB_pears         0.5 Hz S  APPCAST              1...
+LOGGER_DIRECTORY     13:14:47.086         pLogger              0.1 Hz S  ./MOOSLog_15_3_2018___...
+LOGGER_RESTART       18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_DEBUG           18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_SYSTEM          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS                18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS_ITER_HZ        18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS_POST_HZ        18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_CMD          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_STATUS       13:14:47.902         pLogger              0.5 Hz S  AppErrorFlag=false,Upt...
+PSHARE_CMD           18:59:59.000         (write pending)      0.0 Hz ~  
+                   PSHARE_INPUT_SUMMARY 13:14:48.375         pShare               1.0 Hz S  localhost:9201      
+PSHARE_OUTPUT_SUMMARY 13:14:48.375         pShare               1.0 Hz S  PEARS->PEARS:localhost...
+PSHARE_STATUS        13:14:48.350         pShare               0.5 Hz S  AppErrorFlag=false,Upt...
+PXOUT                18:59:59.000         (write pending)      0.0 Hz ~  
+                   PXRELAY_PEARS_STATUS 13:14:47.746         pXRelay_PEARS        0.2 Hz S  AppErrorFlag=false,Upt...
+UXMS_900_ITER_GAP    13:14:49.348         uXMS_900             4.9 Hz D  1.0                  
+UXMS_900_ITER_LEN    13:14:49.148         uXMS_900             4.9 Hz D  0.0                  
+UXMS_900_STATUS      13:14:49.148         uXMS_900             0.4 Hz S  AppErrorFlag=false,Upt...
+ 
+12.376          DB_QOS               MOOSDB_pears    pLogger=0.224113:0.340939:0.108957:0.141191,pShare=0.141859:0.31805:0.105858:0.196362,pXRelay_APPLES=0:0.468016:0.468016:0,pXRelay_PEARS=0.219107:0.267029:0.194073:0.217867,uXMS_900=0.230074:0.231028:0.195026:0.217581,uXMS_935=0:0.204086:0.204086:0, 
+12.376          DB_RWSUMMARY         MOOSDB_pears    uXMS_935=APPCAST_REQ:DB_UPTIME&,pXRelay_APPLES=&,uXMS_900=APPCAST_REQ:APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:DB_UPTIME:PEARS:PEARS_ITER_HZ:PEARS_POST_HZ:PXOUT&APPCAST:UXMS_900_ITER_GAP:UXMS_900_ITER_LEN:UXMS_900_STATUS,pXRelay_PEARS=PEARS&APPLES_ITER_HZ:PXRELAY_PEARS_STATUS,pShare=PEARS:PSHARE_CMD&PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:PSHARE_STATUS,pLogger=APPCAST:APPCAST_REQ:APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:DB_CLIENTS:DB_EVENT:DB_QOS:DB_RWSUMMARY:DB_TIME:DB_UPTIME:DB_VARSUMMARY:LOGGER_DIRECTORY:LOGGER_RESTART:MOOS_DEBUG:MOOS_SYSTEM:PEARS:PEARS_ITER_HZ:PEARS_POST_HZ:PLOGGER_CMD:PLOGGER_STATUS:PSHARE_CMD:PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:PSHARE_STATUS:PXOUT:PXRELAY_PEARS_STATUS:UXMS_900_ITER_GAP:UXMS_900_ITER_LEN:UXMS_900_STATUS&LOGGER_DIRECTORY:PLOGGER_STATUS 
+12.404          PSHARE_OUTPUT_SUMMARY pShare          PEARS->PEARS:localhost:9200 
+12.404          PSHARE_INPUT_SUMMARY pShare          localhost:9201 
+12.580          UXMS_900_ITER_GAP    uXMS_900        1.02193      
+12.580          UXMS_900_ITER_LEN    uXMS_900        0.00017      
+12.780          UXMS_900_ITER_GAP    uXMS_900        1.00070      
+12.780          UXMS_900_ITER_LEN    uXMS_900        0.00023      
+12.780          PXRELAY_PEARS_STATUS pXRelay_PEARS   AppErrorFlag=false,Uptime=5.62054,cpuload=0.04997,memory_kb=1256,memory_max_kb=1256,MOOSName=pXRelay_PEARS,Publishing="APPLES_ITER_HZ,PXRELAY_PEARS_STATUS,",Subscribing="PEARS," 
+12.780          APPLES_ITER_HZ       pXRelay_PEARS   1.24656      
+12.954          UXMS_935_STATUS      uXMS_935        AppErrorFlag=false,Uptime=0.819158,cpuload=1.01,memory_kb=1196,memory_max_kb=1196,MOOSName=uXMS_935,Publishing="",Subscribing="APPCAST_REQ,APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,DB_UPTIME,PEARS,PEARS_ITER_HZ,PEARS_POST_HZ,PXOUT," 
+12.954          UXMS_935_ITER_LEN    uXMS_935        0.00005      
+12.954          PLOGGER_STATUS       pLogger         AppErrorFlag=false,Uptime=12.954,cpuload=0.2437,memory_kb=1488,memory_max_kb=1488,MOOSName=pLogger,Publishing="LOGGER_DIRECTORY,PLOGGER_STATUS,",Subscribing="APPCAST,APPCAST_REQ,APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,DB_CLIENTS,DB_EVENT,DB_QOS,DB_RWSUMMARY,DB_TIME,DB_UPTIME,DB_VARSUMMARY,LOGGER_DIRECTORY,LOGGER_RESTART,MOOS_DEBUG,MOOS_SYSTEM,PEARS,PEARS_ITER_HZ,PEARS_POST_HZ,PLOGGER_CMD,PLOGGER_STATUS,PSHARE_CMD,PSHARE_INPUT_SUMMARY,PSHARE_OUTPUT_SUMMARY,PSHARE_STATUS,PXOUT,PXRELAY_PEARS_STATUS,UXMS_900_ITER_GAP,UXMS_900_ITER_LEN,UXMS_900_STATUS,",LogAuxSrc=false 
+12.955          APPCAST              uXMS_935        proc=uXMS_935!@#iter=1!@#node=apples!@#iter=1!@#messages=VarName         (S)ource       (T)ime  (C)ommunity  VarValue (SCOPING:[7;32mEVENTS[0m)!@--------------  -------------  ------  -----------  -------------------------!@APPLES           n/a            n/a                 n/a!@APPLES_ITER_HZ  pXRelay_PEARS  12.41   pears        1.246562!@APPLES_POST_HZ   n/a            n/a                 n/a!@PEARS            n/a            n/a                 n/a!@PEARS_ITER_HZ    n/a            n/a                 n/a!@PEARS_POST_HZ    n/a            n/a                 n/a!@PXOUT            n/a            n/a                 n/a!@!@#config_warnings=Unhandled config line: PAUSED parameter deprecated, use REFRESH_MODE instead!@#events_total=0!@#!@#run_warning_total=0!@# 
+12.985          UXMS_900_ITER_GAP    uXMS_900        1.02633      
+12.985          UXMS_900_ITER_LEN    uXMS_900        0.00018      
+13.155          UXMS_935_ITER_LEN    uXMS_935        0.00017      
+13.186          UXMS_900_ITER_GAP    uXMS_900        1.00335      
+13.186          UXMS_900_ITER_LEN    uXMS_900        0.00019      
+13.358          UXMS_935_ITER_LEN    uXMS_935        0.00023      
+13.385          PSHARE_STATUS        pShare          AppErrorFlag=false,Uptime=12.786,cpuload=0.1998,memory_kb=1476,memory_max_kb=1476,MOOSName=pShare,Publishing="PSHARE_INPUT_SUMMARY,PSHARE_OUTPUT_SUMMARY,PSHARE_STATUS,",Subscribing="PEARS,PSHARE_CMD," 
+13.386          UXMS_900_ITER_GAP    uXMS_900        1.00367      
+13.386          UXMS_900_ITER_LEN    uXMS_900        0.00019      
+13.413          PSHARE_OUTPUT_SUMMARY pShare          PEARS->PEARS:localhost:9200 
+13.413          PSHARE_INPUT_SUMMARY pShare          localhost:9201 
+13.559          UXMS_935_ITER_LEN    uXMS_935        0.00046      
+13.590          UXMS_900_ITER_GAP    uXMS_900        1.01839      
+13.590          UXMS_900_ITER_LEN    uXMS_900        0.00018      
+13.763          UXMS_935_ITER_LEN    uXMS_935        0.00025      
+13.785          APPLES_ITER_HZ       pXRelay_PEARS   1.19612      
+13.795          UXMS_900_ITER_GAP    uXMS_900        1.02624      
+13.795          UXMS_900_ITER_LEN    uXMS_900        0.00015      
+13.968          UXMS_935_ITER_LEN    uXMS_935        0.00017      
+13.998          UXMS_900_ITER_GAP    uXMS_900        1.01079      
+13.998          UXMS_900_ITER_LEN    uXMS_900        0.00023      
+13.559          PXRELAY_APPLES_STATUS pXRelay_APPLES  AppErrorFlag=false,Uptime=1.66016,cpuload=0.06315,memory_kb=1208,memory_max_kb=1208,MOOSName=pXRelay_APPLES,Publishing="",Subscribing="APPLES," 
+14.172          UXMS_935_ITER_GAP    uXMS_935        1.01815      
+14.172          UXMS_935_ITER_LEN    uXMS_935        0.00027      
+14.200          UXMS_900_STATUS      uXMS_900        AppErrorFlag=false,Uptime=7.03742,cpuload=0.2039,memory_kb=1504,memory_max_kb=1504,MOOSName=uXMS_900,Publishing="APPCAST,UXMS_900_ITER_GAP,UXMS_900_ITER_LEN,UXMS_900_STATUS,",Subscribing="APPCAST_REQ,APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,DB_UPTIME,PEARS,PEARS_ITER_HZ,PEARS_POST_HZ,PXOUT," 
+14.200          UXMS_900_ITER_GAP    uXMS_900        1.01226      
+14.200          UXMS_900_ITER_LEN    uXMS_900        0.00007      
+14.377          UXMS_935_ITER_GAP    uXMS_935        1.02631      
+14.377          UXMS_935_ITER_LEN    uXMS_935        0.00021      
+14.377          DB_TIME              MOOSDB_pears    1521134091.35019 
+14.377          DB_UPTIME            MOOSDB_pears    14.58935     
+14.377          DB_CLIENTS           MOOSDB_pears    uXMS_935,pXRelay_APPLES,uXMS_900,pXRelay_PEARS,pShare,pLogger, 
+14.377          DB_VARSUMMARY        MOOSDB_pears    APPCAST              13:14:49.927         uXMS_935             0.1 Hz S  proc=uXMS_935!@#iter=1...
+APPCAST_REQ          18:59:59.000         (write pending)      0.0 Hz ~  
+                   APPLES               18:59:59.000         (write pending)      0.0 Hz ~  
+                   APPLES_ITER_HZ       13:14:50.758         pXRelay_PEARS        0.9 Hz D  1.2                  
+APPLES_POST_HZ       18:59:59.000         (write pending)      0.0 Hz ~  
+                   DB_CLIENTS           13:14:51.350         MOOSDB_pears         0.5 Hz S  uXMS_935,pXRelay_APPLE...
+DB_EVENT             13:14:49.211         MOOSDB_pears         0.5 Hz S  connected=uXMS_935  
+DB_QOS               13:14:49.348         MOOSDB_pears         0.5 Hz S  pLogger=0.224113:0.340...
+DB_RWSUMMARY         13:14:49.348         MOOSDB_pears         0.5 Hz S  uXMS_935=APPCAST_REQ:D...
+DB_TIME              13:14:51.350         MOOSDB_pears         0.5 Hz D  1521134091.4         
+DB_UPTIME            13:14:51.350         MOOSDB_pears         0.5 Hz D  14.6                 
+DB_VARSUMMARY        13:14:49.348         MOOSDB_pears         0.5 Hz S  APPCAST              1...
+LOGGER_DIRECTORY     13:14:47.086         pLogger              0.1 Hz S  ./MOOSLog_15_3_2018___...
+LOGGER_RESTART       18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_DEBUG           18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_SYSTEM          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS                18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS_ITER_HZ        18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS_POST_HZ        18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_CMD          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_STATUS       13:14:49.927         pLogger              0.5 Hz S  AppErrorFlag=false,Upt...
+PSHARE_CMD           18:59:59.000         (write pending)      0.0 Hz ~  
+                   PSHARE_INPUT_SUMMARY 13:14:50.386         pShare               1.0 Hz S  localhost:9201      
+PSHARE_OUTPUT_SUMMARY 13:14:50.386         pShare               1.0 Hz S  PEARS->PEARS:localhost...
+PSHARE_STATUS        13:14:50.358         pShare               0.5 Hz S  AppErrorFlag=false,Upt...
+PXOUT                18:59:59.000         (write pending)      0.0 Hz ~  
+                   PXRELAY_APPLES_STATUS 13:14:50.532         pXRelay_APPLES       0.0 Hz S  AppErrorFlag=false,Upt...
+PXRELAY_PEARS_STATUS 13:14:49.753         pXRelay_PEARS        0.4 Hz S  AppErrorFlag=false,Upt...
+UXMS_900_ITER_GAP    13:14:51.173         uXMS_900             4.9 Hz D  1.0                  
+UXMS_900_ITER_LEN    13:14:51.173         uXMS_900             4.9 Hz D  0.0                  
+UXMS_900_STATUS      13:14:51.173         uXMS_900             0.4 Hz S  AppErrorFlag=false,Upt...
+UXMS_935_ITER_GAP    13:14:51.350         uXMS_935             3.7 Hz D  1.0                  
+UXMS_935_ITER_LEN    13:14:51.145         uXMS_935             3.7 Hz D  0.0                  
+UXMS_935_STATUS      13:14:49.927         uXMS_935             0.0 Hz S  AppErrorFlag=false,Upt...
+ 
+14.377          DB_QOS               MOOSDB_pears    pLogger=0.175953:0.340939:0.108957:0.131559,pShare=0.192881:0.359774:0.105858:0.206566,pXRelay_APPLES=0:0.468016:0.149012:0,pXRelay_PEARS=0.293016:0.374079:0.194073:0.232649,uXMS_900=0.204086:0.247955:0.195026:0.212383,uXMS_935=0:0.304937:0.204086:0, 
+14.377          DB_RWSUMMARY         MOOSDB_pears    uXMS_935=APPCAST_REQ:APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:DB_UPTIME:PEARS:PEARS_ITER_HZ:PEARS_POST_HZ:PXOUT&APPCAST:UXMS_935_ITER_GAP:UXMS_935_ITER_LEN:UXMS_935_STATUS,pXRelay_APPLES=APPLES&PXRELAY_APPLES_STATUS,uXMS_900=APPCAST_REQ:APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:DB_UPTIME:PEARS:PEARS_ITER_HZ:PEARS_POST_HZ:PXOUT&APPCAST:UXMS_900_ITER_GAP:UXMS_900_ITER_LEN:UXMS_900_STATUS,pXRelay_PEARS=PEARS&APPLES_ITER_HZ:PXRELAY_PEARS_STATUS,pShare=PEARS:PSHARE_CMD&PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:PSHARE_STATUS,pLogger=APPCAST:APPCAST_REQ:APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:DB_CLIENTS:DB_EVENT:DB_QOS:DB_RWSUMMARY:DB_TIME:DB_UPTIME:DB_VARSUMMARY:LOGGER_DIRECTORY:LOGGER_RESTART:MOOS_DEBUG:MOOS_SYSTEM:PEARS:PEARS_ITER_HZ:PEARS_POST_HZ:PLOGGER_CMD:PLOGGER_STATUS:PSHARE_CMD:PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:PSHARE_STATUS:PXOUT:PXRELAY_APPLES_STATUS:PXRELAY_PEARS_STATUS:UXMS_900_ITER_GAP:UXMS_900_ITER_LEN:UXMS_900_STATUS:UXMS_935_ITER_GAP:UXMS_935_ITER_LEN:UXMS_935_STATUS&LOGGER_DIRECTORY:PLOGGER_STATUS 
+14.402          UXMS_900_ITER_GAP    uXMS_900        1.01122      
+14.402          UXMS_900_ITER_LEN    uXMS_900        0.00021      
+14.430          PSHARE_OUTPUT_SUMMARY pShare          PEARS->PEARS:localhost:9200 
+14.430          PSHARE_INPUT_SUMMARY pShare          localhost:9201 
+14.564          PEARS_ITER_HZ        pXRelay_APPLES  1.98953      
+14.577          UXMS_935_ITER_GAP    uXMS_935        1.00181      
+14.577          UXMS_935_ITER_LEN    uXMS_935        0.00014      
+14.604          UXMS_900_ITER_GAP    uXMS_900        1.00965      
+14.604          UXMS_900_ITER_LEN    uXMS_900        0.00021      
+14.780          UXMS_935_ITER_GAP    uXMS_935        1.01680      
+14.781          UXMS_935_ITER_LEN    uXMS_935        0.00024      
+14.790          PXRELAY_PEARS_STATUS pXRelay_PEARS   AppErrorFlag=false,Uptime=7.63098,cpuload=0.05499,memory_kb=1324,memory_max_kb=1324,MOOSName=pXRelay_PEARS,Publishing="APPLES_ITER_HZ,PXRELAY_PEARS_STATUS,",Subscribing="PEARS," 
+14.790          APPLES_ITER_HZ       pXRelay_PEARS   1.16251      
+14.806          UXMS_900_ITER_GAP    uXMS_900        1.00686      
+14.806          UXMS_900_ITER_LEN    uXMS_900        0.00020      
+14.981          UXMS_935_STATUS      uXMS_935        AppErrorFlag=false,Uptime=2.8459,cpuload=0.3185,memory_kb=1456,memory_max_kb=1456,MOOSName=uXMS_935,Publishing="APPCAST,UXMS_935_ITER_GAP,UXMS_935_ITER_LEN,UXMS_935_STATUS,",Subscribing="APPCAST_REQ,APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,DB_UPTIME,PEARS,PEARS_ITER_HZ,PEARS_POST_HZ,PXOUT," 
+14.981          UXMS_935_ITER_GAP    uXMS_935        1.00101      
+14.981          UXMS_935_ITER_LEN    uXMS_935        0.00007      
+14.981          PLOGGER_STATUS       pLogger         AppErrorFlag=false,Uptime=14.9813,cpuload=0.4598,memory_kb=1492,memory_max_kb=1492,MOOSName=pLogger,Publishing="LOGGER_DIRECTORY,PLOGGER_STATUS,",Subscribing="APPCAST,APPCAST_REQ,APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,DB_CLIENTS,DB_EVENT,DB_QOS,DB_RWSUMMARY,DB_TIME,DB_UPTIME,DB_VARSUMMARY,LOGGER_DIRECTORY,LOGGER_RESTART,MOOS_DEBUG,MOOS_SYSTEM,PEARS,PEARS_ITER_HZ,PEARS_POST_HZ,PLOGGER_CMD,PLOGGER_STATUS,PSHARE_CMD,PSHARE_INPUT_SUMMARY,PSHARE_OUTPUT_SUMMARY,PSHARE_STATUS,PXOUT,PXRELAY_APPLES_STATUS,PXRELAY_PEARS_STATUS,UXMS_900_ITER_GAP,UXMS_900_ITER_LEN,UXMS_900_STATUS,UXMS_935_ITER_GAP,UXMS_935_ITER_LEN,UXMS_935_STATUS,",LogAuxSrc=false 
+15.006          UXMS_900_ITER_GAP    uXMS_900        1.00054      
+15.006          UXMS_900_ITER_LEN    uXMS_900        0.00012      
+15.182          UXMS_935_ITER_GAP    uXMS_935        1.00786      
+15.182          UXMS_935_ITER_LEN    uXMS_935        0.00025      
+15.208          UXMS_900_ITER_GAP    uXMS_900        1.01218      
+15.208          UXMS_900_ITER_LEN    uXMS_900        0.00019      
+15.383          UXMS_935_ITER_GAP    uXMS_935        1.00128      
+15.383          UXMS_935_ITER_LEN    uXMS_935        0.00014      
+15.396          PSHARE_STATUS        pShare          AppErrorFlag=false,Uptime=14.7969,cpuload=0.2025,memory_kb=1476,memory_max_kb=1476,MOOSName=pShare,Publishing="PSHARE_INPUT_SUMMARY,PSHARE_OUTPUT_SUMMARY,PSHARE_STATUS,",Subscribing="PEARS,PSHARE_CMD," 
+15.413          UXMS_900_ITER_GAP    uXMS_900        1.02630      
+15.413          UXMS_900_ITER_LEN    uXMS_900        0.00037      
+15.447          PSHARE_OUTPUT_SUMMARY pShare          PEARS->PEARS:localhost:9200 
+15.447          PSHARE_INPUT_SUMMARY pShare          localhost:9201 
+15.564          PXRELAY_APPLES_STATUS pXRelay_APPLES  AppErrorFlag=false,Uptime=3.66566,cpuload=0.05328,memory_kb=1288,memory_max_kb=1288,MOOSName=pXRelay_APPLES,Publishing="PEARS_ITER_HZ,PXRELAY_APPLES_STATUS,",Subscribing="APPLES," 
+15.564          PEARS_ITER_HZ        pXRelay_APPLES  1.49588      
+15.587          UXMS_935_ITER_GAP    uXMS_935        1.02304      
+15.587          UXMS_935_ITER_LEN    uXMS_935        0.00018      
+15.619          UXMS_900_ITER_GAP    uXMS_900        1.02720      
+15.619          UXMS_900_ITER_LEN    uXMS_900        0.00016      
+15.789          UXMS_935_ITER_GAP    uXMS_935        1.00865      
+15.789          UXMS_935_ITER_LEN    uXMS_935        0.00022      
+15.794          APPLES_ITER_HZ       pXRelay_PEARS   1.13875      
+15.822          UXMS_900_ITER_GAP    uXMS_900        1.01572      
+15.822          UXMS_900_ITER_LEN    uXMS_900        0.00009      
+15.989          UXMS_935_ITER_GAP    uXMS_935        1.00076      
+15.989          UXMS_935_ITER_LEN    uXMS_935        0.00012      
+16.026          UXMS_900_ITER_GAP    uXMS_900        1.02208      
+16.026          UXMS_900_ITER_LEN    uXMS_900        0.00021      
+16.195          UXMS_935_ITER_GAP    uXMS_935        1.02925      
+16.195          UXMS_935_ITER_LEN    uXMS_935        0.00019      
+16.227          UXMS_900_STATUS      uXMS_900        AppErrorFlag=false,Uptime=9.06447,cpuload=0.2008,memory_kb=1504,memory_max_kb=1504,MOOSName=uXMS_900,Publishing="APPCAST,UXMS_900_ITER_GAP,UXMS_900_ITER_LEN,UXMS_900_STATUS,",Subscribing="APPCAST_REQ,APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,DB_UPTIME,PEARS,PEARS_ITER_HZ,PEARS_POST_HZ,PXOUT," 
+16.227          UXMS_900_ITER_GAP    uXMS_900        1.00353      
+16.227          UXMS_900_ITER_LEN    uXMS_900        0.00006      
+16.396          UXMS_935_ITER_GAP    uXMS_935        1.00498      
+16.396          UXMS_935_ITER_LEN    uXMS_935        0.00022      
+16.396          DB_TIME              MOOSDB_pears    1521134093.36923 
+16.396          DB_UPTIME            MOOSDB_pears    16.60839     
+16.396          DB_CLIENTS           MOOSDB_pears    uXMS_935,pXRelay_APPLES,uXMS_900,pXRelay_PEARS,pShare,pLogger, 
+16.396          DB_VARSUMMARY        MOOSDB_pears    APPCAST              13:14:49.927         uXMS_935             0.1 Hz S  proc=uXMS_935!@#iter=1...
+APPCAST_REQ          18:59:59.000         (write pending)      0.0 Hz ~  
+                   APPLES               18:59:59.000         (write pending)      0.0 Hz ~  
+                   APPLES_ITER_HZ       13:14:52.767         pXRelay_PEARS        1.0 Hz D  1.1                  
+APPLES_POST_HZ       18:59:59.000         (write pending)      0.0 Hz ~  
+                   DB_CLIENTS           13:14:53.369         MOOSDB_pears         0.5 Hz S  uXMS_935,pXRelay_APPLE...
+DB_EVENT             13:14:49.211         MOOSDB_pears         0.5 Hz S  connected=uXMS_935  
+DB_QOS               13:14:51.350         MOOSDB_pears         0.5 Hz S  pLogger=0.175953:0.340...
+DB_RWSUMMARY         13:14:51.350         MOOSDB_pears         0.5 Hz S  uXMS_935=APPCAST_REQ:A...
+DB_TIME              13:14:53.369         MOOSDB_pears         0.5 Hz D  1521134093.4         
+DB_UPTIME            13:14:53.369         MOOSDB_pears         0.5 Hz D  16.6                 
+DB_VARSUMMARY        13:14:51.350         MOOSDB_pears         0.5 Hz S  APPCAST              1...
+LOGGER_DIRECTORY     13:14:47.086         pLogger              0.1 Hz S  ./MOOSLog_15_3_2018___...
+LOGGER_RESTART       18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_DEBUG           18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_SYSTEM          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS                18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS_ITER_HZ        13:14:52.537         pXRelay_APPLES       0.5 Hz D  1.5                  
+PEARS_POST_HZ        18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_CMD          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_STATUS       13:14:51.954         pLogger              0.5 Hz S  AppErrorFlag=false,Upt...
+PSHARE_CMD           18:59:59.000         (write pending)      0.0 Hz ~  
+                   PSHARE_INPUT_SUMMARY 13:14:52.419         pShare               1.0 Hz S  localhost:9201      
+PSHARE_OUTPUT_SUMMARY 13:14:52.419         pShare               1.0 Hz S  PEARS->PEARS:localhost...
+PSHARE_STATUS        13:14:52.369         pShare               0.5 Hz S  AppErrorFlag=false,Upt...
+PXOUT                18:59:59.000         (write pending)      0.0 Hz ~  
+                   PXRELAY_APPLES_STATUS 13:14:52.537         pXRelay_APPLES       0.2 Hz S  AppErrorFlag=false,Upt...
+PXRELAY_PEARS_STATUS 13:14:51.763         pXRelay_PEARS        0.4 Hz S  AppErrorFlag=false,Upt...
+UXMS_900_ITER_GAP    13:14:53.200         uXMS_900             4.9 Hz D  1.0                  
+UXMS_900_ITER_LEN    13:14:53.200         uXMS_900             4.9 Hz D  0.0                  
+UXMS_900_STATUS      13:14:53.200         uXMS_900             0.5 Hz S  AppErrorFlag=false,Upt...
+UXMS_935_ITER_GAP    13:14:53.369         uXMS_935             4.8 Hz D  1.0                  
+UXMS_935_ITER_LEN    13:14:53.168         uXMS_935             4.8 Hz D  0.0                  
+UXMS_935_STATUS      13:14:51.954         uXMS_935             0.2 Hz S  AppErrorFlag=false,Upt...
+ 
+16.396          DB_QOS               MOOSDB_pears    pLogger=0.194073:0.340939:0.108957:0.135183,pShare=0.141859:0.359774:0.105858:0.196362,pXRelay_APPLES=0:0.468016:0.149012:0,pXRelay_PEARS=0.298023:0.374079:0.194073:0.23365,uXMS_900=0.311852:0.326157:0.195026:0.233936,uXMS_935=0.22912:0.304937:0.204086:0.263453, 
+16.397          DB_RWSUMMARY         MOOSDB_pears    uXMS_935=APPCAST_REQ:APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:DB_UPTIME:PEARS:PEARS_ITER_HZ:PEARS_POST_HZ:PXOUT&APPCAST:UXMS_935_ITER_GAP:UXMS_935_ITER_LEN:UXMS_935_STATUS,pXRelay_APPLES=APPLES&PEARS_ITER_HZ:PXRELAY_APPLES_STATUS,uXMS_900=APPCAST_REQ:APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:DB_UPTIME:PEARS:PEARS_ITER_HZ:PEARS_POST_HZ:PXOUT&APPCAST:UXMS_900_ITER_GAP:UXMS_900_ITER_LEN:UXMS_900_STATUS,pXRelay_PEARS=PEARS&APPLES_ITER_HZ:PXRELAY_PEARS_STATUS,pShare=PEARS:PSHARE_CMD&PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:PSHARE_STATUS,pLogger=APPCAST:APPCAST_REQ:APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:DB_CLIENTS:DB_EVENT:DB_QOS:DB_RWSUMMARY:DB_TIME:DB_UPTIME:DB_VARSUMMARY:LOGGER_DIRECTORY:LOGGER_RESTART:MOOS_DEBUG:MOOS_SYSTEM:PEARS:PEARS_ITER_HZ:PEARS_POST_HZ:PLOGGER_CMD:PLOGGER_STATUS:PSHARE_CMD:PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:PSHARE_STATUS:PXOUT:PXRELAY_APPLES_STATUS:PXRELAY_PEARS_STATUS:UXMS_900_ITER_GAP:UXMS_900_ITER_LEN:UXMS_900_STATUS:UXMS_935_ITER_GAP:UXMS_935_ITER_LEN:UXMS_935_STATUS&LOGGER_DIRECTORY:PLOGGER_STATUS 
+16.427          UXMS_900_ITER_GAP    uXMS_900        1.00069      
+16.427          UXMS_900_ITER_LEN    uXMS_900        0.00017      
+16.456          PSHARE_OUTPUT_SUMMARY pShare          PEARS->PEARS:localhost:9200 
+16.456          PSHARE_INPUT_SUMMARY pShare          localhost:9201 
+16.570          PEARS_ITER_HZ        pXRelay_APPLES  1.32860      
+16.597          UXMS_935_ITER_GAP    uXMS_935        1.00412      
+16.597          UXMS_935_ITER_LEN    uXMS_935        0.00029      
+16.631          UXMS_900_ITER_GAP    uXMS_900        1.01849      
+16.631          UXMS_900_ITER_LEN    uXMS_900        0.00014      
+16.798          UXMS_935_ITER_GAP    uXMS_935        1.00672      
+16.798          PXRELAY_PEARS_STATUS pXRelay_PEARS   AppErrorFlag=false,Uptime=9.63876,cpuload=0.04537,memory_kb=1324,memory_max_kb=1324,MOOSName=pXRelay_PEARS,Publishing="APPLES_ITER_HZ,PXRELAY_PEARS_STATUS,",Subscribing="PEARS," 
+16.798          UXMS_935_ITER_LEN    uXMS_935        0.00021      
+16.798          APPLES_ITER_HZ       pXRelay_PEARS   1.12090      
+16.836          UXMS_900_ITER_GAP    uXMS_900        1.02757      
+16.836          UXMS_900_ITER_LEN    uXMS_900        0.00021      
+16.998          PLOGGER_STATUS       pLogger         AppErrorFlag=false,Uptime=16.9984,cpuload=0.3046,memory_kb=1524,memory_max_kb=1524,MOOSName=pLogger,Publishing="LOGGER_DIRECTORY,PLOGGER_STATUS,",Subscribing="APPCAST,APPCAST_REQ,APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,DB_CLIENTS,DB_EVENT,DB_QOS,DB_RWSUMMARY,DB_TIME,DB_UPTIME,DB_VARSUMMARY,LOGGER_DIRECTORY,LOGGER_RESTART,MOOS_DEBUG,MOOS_SYSTEM,PEARS,PEARS_ITER_HZ,PEARS_POST_HZ,PLOGGER_CMD,PLOGGER_STATUS,PSHARE_CMD,PSHARE_INPUT_SUMMARY,PSHARE_OUTPUT_SUMMARY,PSHARE_STATUS,PXOUT,PXRELAY_APPLES_STATUS,PXRELAY_PEARS_STATUS,UXMS_900_ITER_GAP,UXMS_900_ITER_LEN,UXMS_900_STATUS,UXMS_935_ITER_GAP,UXMS_935_ITER_LEN,UXMS_935_STATUS,",LogAuxSrc=false 
+17.001          UXMS_935_STATUS      uXMS_935        AppErrorFlag=false,Uptime=4.86641,cpuload=0.2729,memory_kb=1500,memory_max_kb=1500,MOOSName=uXMS_935,Publishing="APPCAST,UXMS_935_ITER_GAP,UXMS_935_ITER_LEN,UXMS_935_STATUS,",Subscribing="APPCAST_REQ,APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,DB_UPTIME,PEARS,PEARS_ITER_HZ,PEARS_POST_HZ,PXOUT," 
+17.001          UXMS_935_ITER_GAP    uXMS_935        1.01587      
+17.001          UXMS_935_ITER_LEN    uXMS_935        0.00007      
+17.042          UXMS_900_ITER_GAP    uXMS_900        1.02638      
+17.042          UXMS_900_ITER_LEN    uXMS_900        0.00019      
+17.203          UXMS_935_ITER_GAP    uXMS_935        1.00823      
+17.203          UXMS_935_ITER_LEN    uXMS_935        0.00026      
+17.247          UXMS_900_ITER_GAP    uXMS_900        1.02433      
+17.247          UXMS_900_ITER_LEN    uXMS_900        0.00019      
+17.403          UXMS_935_ITER_GAP    uXMS_935        1.00186      
+17.403          UXMS_935_ITER_LEN    uXMS_935        0.00024      
+17.403          PSHARE_STATUS        pShare          AppErrorFlag=false,Uptime=16.8044,cpuload=0.197,memory_kb=1508,memory_max_kb=1508,MOOSName=pShare,Publishing="PSHARE_INPUT_SUMMARY,PSHARE_OUTPUT_SUMMARY,PSHARE_STATUS,",Subscribing="PEARS,PSHARE_CMD," 
+17.447          UXMS_900_ITER_GAP    uXMS_900        1.00198      
+17.447          UXMS_900_ITER_LEN    uXMS_900        0.00019      
+17.459          PSHARE_OUTPUT_SUMMARY pShare          PEARS->PEARS:localhost:9200 
+17.459          PSHARE_INPUT_SUMMARY pShare          localhost:9201 
+17.570          PXRELAY_APPLES_STATUS pXRelay_APPLES  AppErrorFlag=false,Uptime=5.67134,cpuload=0.04459,memory_kb=1288,memory_max_kb=1288,MOOSName=pXRelay_APPLES,Publishing="PEARS_ITER_HZ,PXRELAY_APPLES_STATUS,",Subscribing="APPLES," 
+17.570          PEARS_ITER_HZ        pXRelay_APPLES  1.24651      
+17.604          UXMS_935_ITER_GAP    uXMS_935        1.00479      
+17.604          UXMS_935_ITER_LEN    uXMS_935        0.00023      
+17.649          UXMS_900_ITER_GAP    uXMS_900        1.00834      
+17.649          UXMS_900_ITER_LEN    uXMS_900        0.00016      
+17.801          APPLES_ITER_HZ       pXRelay_PEARS   1.10713      
+17.809          UXMS_935_ITER_GAP    uXMS_935        1.02254      
+17.809          UXMS_935_ITER_LEN    uXMS_935        0.00024      
+17.849          UXMS_900_ITER_GAP    uXMS_900        1.00364      
+17.849          UXMS_900_ITER_LEN    uXMS_900        0.00013      
+18.010          UXMS_935_ITER_GAP    uXMS_935        1.00671      
+18.010          UXMS_935_ITER_LEN    uXMS_935        0.00019      
+18.051          UXMS_900_ITER_GAP    uXMS_900        1.00700      
+18.051          UXMS_900_ITER_LEN    uXMS_900        0.00017      
+18.210          UXMS_935_ITER_GAP    uXMS_935        1.00188      
+18.210          UXMS_935_ITER_LEN    uXMS_935        0.00013      
+18.252          UXMS_900_STATUS      uXMS_900        AppErrorFlag=false,Uptime=11.0891,cpuload=0.205,memory_kb=1508,memory_max_kb=1508,MOOSName=uXMS_900,Publishing="APPCAST,UXMS_900_ITER_GAP,UXMS_900_ITER_LEN,UXMS_900_STATUS,",Subscribing="APPCAST_REQ,APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,DB_UPTIME,PEARS,PEARS_ITER_HZ,PEARS_POST_HZ,PXOUT," 
+18.252          UXMS_900_ITER_GAP    uXMS_900        1.00489      
+18.252          UXMS_900_ITER_LEN    uXMS_900        0.00007      
+18.411          UXMS_935_ITER_GAP    uXMS_935        1.00371      
+18.411          UXMS_935_ITER_LEN    uXMS_935        0.00018      
+18.411          DB_TIME              MOOSDB_pears    1521134095.38450 
+18.411          DB_UPTIME            MOOSDB_pears    18.62366     
+18.411          DB_CLIENTS           MOOSDB_pears    uXMS_935,pXRelay_APPLES,uXMS_900,pXRelay_PEARS,pShare,pLogger, 
+18.412          DB_VARSUMMARY        MOOSDB_pears    APPCAST              13:14:49.927         uXMS_935             0.1 Hz S  proc=uXMS_935!@#iter=1...
+APPCAST_REQ          18:59:59.000         (write pending)      0.0 Hz ~  
+                   APPLES               18:59:59.000         (write pending)      0.0 Hz ~  
+                   APPLES_ITER_HZ       13:14:54.774         pXRelay_PEARS        1.0 Hz D  1.1                  
+APPLES_POST_HZ       18:59:59.000         (write pending)      0.0 Hz ~  
+                   DB_CLIENTS           13:14:55.384         MOOSDB_pears         0.5 Hz S  uXMS_935,pXRelay_APPLE...
+DB_EVENT             13:14:49.211         MOOSDB_pears         0.5 Hz S  connected=uXMS_935  
+DB_QOS               13:14:53.369         MOOSDB_pears         0.5 Hz S  pLogger=0.194073:0.340...
+DB_RWSUMMARY         13:14:53.369         MOOSDB_pears         0.5 Hz S  uXMS_935=APPCAST_REQ:A...
+DB_TIME              13:14:55.384         MOOSDB_pears         0.5 Hz D  1521134095.4         
+DB_UPTIME            13:14:55.384         MOOSDB_pears         0.5 Hz D  18.6                 
+DB_VARSUMMARY        13:14:53.369         MOOSDB_pears         0.5 Hz S  APPCAST              1...
+LOGGER_DIRECTORY     13:14:47.086         pLogger              0.1 Hz S  ./MOOSLog_15_3_2018___...
+LOGGER_RESTART       18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_DEBUG           18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_SYSTEM          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS                18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS_ITER_HZ        13:14:54.543         pXRelay_APPLES       0.9 Hz D  1.2                  
+PEARS_POST_HZ        18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_CMD          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_STATUS       13:14:53.971         pLogger              0.5 Hz S  AppErrorFlag=false,Upt...
+PSHARE_CMD           18:59:59.000         (write pending)      0.0 Hz ~  
+                   PSHARE_INPUT_SUMMARY 13:14:54.432         pShare               1.0 Hz S  localhost:9201      
+PSHARE_OUTPUT_SUMMARY 13:14:54.432         pShare               1.0 Hz S  PEARS->PEARS:localhost...
+PSHARE_STATUS        13:14:54.376         pShare               0.5 Hz S  AppErrorFlag=false,Upt...
+PXOUT                18:59:59.000         (write pending)      0.0 Hz ~  
+                   PXRELAY_APPLES_STATUS 13:14:54.543         pXRelay_APPLES       0.4 Hz S  AppErrorFlag=false,Upt...
+PXRELAY_PEARS_STATUS 13:14:53.771         pXRelay_PEARS        0.5 Hz S  AppErrorFlag=false,Upt...
+UXMS_900_ITER_GAP    13:14:55.225         uXMS_900             4.9 Hz D  1.0                  
+UXMS_900_ITER_LEN    13:14:55.225         uXMS_900             4.9 Hz D  0.0                  
+UXMS_900_STATUS      13:14:55.225         uXMS_900             0.5 Hz S  AppErrorFlag=false,Upt...
+UXMS_935_ITER_GAP    13:14:55.384         uXMS_935             4.9 Hz D  1.0                  
+UXMS_935_ITER_LEN    13:14:55.183         uXMS_935             4.9 Hz D  0.0                  
+UXMS_935_STATUS      13:14:53.974         uXMS_935             0.4 Hz S  AppErrorFlag=false,Upt...
+ 
+18.412          DB_QOS               MOOSDB_pears    pLogger=0.312805:0.340939:0.108957:0.15893,pShare=0.178814:0.359774:0.105858:0.203753,pXRelay_APPLES=0.20504:0.468016:0.149012:0.244999,pXRelay_PEARS=0.236034:0.374079:0.194073:0.221252,uXMS_900=0.253916:0.326157:0.195026:0.222349,uXMS_935=0.204086:0.304937:0.204086:0.258446, 
+18.412          DB_RWSUMMARY         MOOSDB_pears    uXMS_935=APPCAST_REQ:APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:DB_UPTIME:PEARS:PEARS_ITER_HZ:PEARS_POST_HZ:PXOUT&APPCAST:UXMS_935_ITER_GAP:UXMS_935_ITER_LEN:UXMS_935_STATUS,pXRelay_APPLES=APPLES&PEARS_ITER_HZ:PXRELAY_APPLES_STATUS,uXMS_900=APPCAST_REQ:APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:DB_UPTIME:PEARS:PEARS_ITER_HZ:PEARS_POST_HZ:PXOUT&APPCAST:UXMS_900_ITER_GAP:UXMS_900_ITER_LEN:UXMS_900_STATUS,pXRelay_PEARS=PEARS&APPLES_ITER_HZ:PXRELAY_PEARS_STATUS,pShare=PEARS:PSHARE_CMD&PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:PSHARE_STATUS,pLogger=APPCAST:APPCAST_REQ:APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:DB_CLIENTS:DB_EVENT:DB_QOS:DB_RWSUMMARY:DB_TIME:DB_UPTIME:DB_VARSUMMARY:LOGGER_DIRECTORY:LOGGER_RESTART:MOOS_DEBUG:MOOS_SYSTEM:PEARS:PEARS_ITER_HZ:PEARS_POST_HZ:PLOGGER_CMD:PLOGGER_STATUS:PSHARE_CMD:PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:PSHARE_STATUS:PXOUT:PXRELAY_APPLES_STATUS:PXRELAY_PEARS_STATUS:UXMS_900_ITER_GAP:UXMS_900_ITER_LEN:UXMS_900_STATUS:UXMS_935_ITER_GAP:UXMS_935_ITER_LEN:UXMS_935_STATUS&LOGGER_DIRECTORY:PLOGGER_STATUS 
+18.455          UXMS_900_ITER_GAP    uXMS_900        1.01834      
+18.455          UXMS_900_ITER_LEN    uXMS_900        0.00021      
+18.460          PSHARE_OUTPUT_SUMMARY pShare          PEARS->PEARS:localhost:9200 
+18.460          PSHARE_INPUT_SUMMARY pShare          localhost:9201 
+18.571          PEARS_ITER_HZ        pXRelay_APPLES  1.19717      
+18.616          UXMS_935_ITER_GAP    uXMS_935        1.02614      
+18.616          UXMS_935_ITER_LEN    uXMS_935        0.00016      
+18.656          UXMS_900_ITER_GAP    uXMS_900        1.00410      
+18.656          UXMS_900_ITER_LEN    uXMS_900        0.00013      
+18.805          PXRELAY_PEARS_STATUS pXRelay_PEARS   AppErrorFlag=false,Uptime=11.646,cpuload=0.05459,memory_kb=1356,memory_max_kb=1356,MOOSName=pXRelay_PEARS,Publishing="APPLES_ITER_HZ,PXRELAY_PEARS_STATUS,",Subscribing="PEARS," 
+18.805          APPLES_ITER_HZ       pXRelay_PEARS   1.09600      
+18.822          UXMS_935_ITER_GAP    uXMS_935        1.02597      
+18.822          UXMS_935_ITER_LEN    uXMS_935        0.00021      
+18.860          UXMS_900_ITER_GAP    uXMS_900        1.01810      
+18.860          UXMS_900_ITER_LEN    uXMS_900        0.00016      
+19.022          UXMS_935_STATUS      uXMS_935        AppErrorFlag=false,Uptime=6.88718,cpuload=0.2592,memory_kb=1504,memory_max_kb=1504,MOOSName=uXMS_935,Publishing="APPCAST,UXMS_935_ITER_GAP,UXMS_935_ITER_LEN,UXMS_935_STATUS,",Subscribing="APPCAST_REQ,APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,DB_UPTIME,PEARS,PEARS_ITER_HZ,PEARS_POST_HZ,PXOUT," 
+19.022          UXMS_935_ITER_GAP    uXMS_935        1.00201      
+19.022          UXMS_935_ITER_LEN    uXMS_935        0.00007      
+19.022          PLOGGER_STATUS       pLogger         AppErrorFlag=false,Uptime=19.022,cpuload=0.2779,memory_kb=1524,memory_max_kb=1524,MOOSName=pLogger,Publishing="LOGGER_DIRECTORY,PLOGGER_STATUS,",Subscribing="APPCAST,APPCAST_REQ,APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,DB_CLIENTS,DB_EVENT,DB_QOS,DB_RWSUMMARY,DB_TIME,DB_UPTIME,DB_VARSUMMARY,LOGGER_DIRECTORY,LOGGER_RESTART,MOOS_DEBUG,MOOS_SYSTEM,PEARS,PEARS_ITER_HZ,PEARS_POST_HZ,PLOGGER_CMD,PLOGGER_STATUS,PSHARE_CMD,PSHARE_INPUT_SUMMARY,PSHARE_OUTPUT_SUMMARY,PSHARE_STATUS,PXOUT,PXRELAY_APPLES_STATUS,PXRELAY_PEARS_STATUS,UXMS_900_ITER_GAP,UXMS_900_ITER_LEN,UXMS_900_STATUS,UXMS_935_ITER_GAP,UXMS_935_ITER_LEN,UXMS_935_STATUS,",LogAuxSrc=false 
+19.060          UXMS_900_ITER_GAP    uXMS_900        1.00098      
+19.060          UXMS_900_ITER_LEN    uXMS_900        0.00021      
+19.227          UXMS_935_ITER_GAP    uXMS_935        1.02546      
+19.227          UXMS_935_ITER_LEN    uXMS_935        0.00038      
+19.262          UXMS_900_ITER_GAP    uXMS_900        1.00847      
+19.262          UXMS_900_ITER_LEN    uXMS_900        0.00023      
+19.421          PSHARE_STATUS        pShare          AppErrorFlag=false,Uptime=18.8224,cpuload=0.1835,memory_kb=1508,memory_max_kb=1508,MOOSName=pShare,Publishing="PSHARE_INPUT_SUMMARY,PSHARE_OUTPUT_SUMMARY,PSHARE_STATUS,",Subscribing="PEARS,PSHARE_CMD," 
+19.428          UXMS_935_ITER_GAP    uXMS_935        1.00302      
+19.428          UXMS_935_ITER_LEN    uXMS_935        0.00018      
+19.462          UXMS_900_ITER_GAP    uXMS_900        1.00080      
+19.462          UXMS_900_ITER_LEN    uXMS_900        0.00015      
+19.479          PSHARE_OUTPUT_SUMMARY pShare          PEARS->PEARS:localhost:9200 
+19.479          PSHARE_INPUT_SUMMARY pShare          localhost:9201 
+19.576          PXRELAY_APPLES_STATUS pXRelay_APPLES  AppErrorFlag=false,Uptime=7.67701,cpuload=0.04697,memory_kb=1288,memory_max_kb=1288,MOOSName=pXRelay_APPLES,Publishing="PEARS_ITER_HZ,PXRELAY_APPLES_STATUS,",Subscribing="APPLES," 
+19.576          PEARS_ITER_HZ        pXRelay_APPLES  1.16339      
+19.628          UXMS_935_ITER_GAP    uXMS_935        1.00074      
+19.628          UXMS_935_ITER_LEN    uXMS_935        0.00013      
+19.667          UXMS_900_ITER_GAP    uXMS_900        1.02605      
+19.667          UXMS_900_ITER_LEN    uXMS_900        0.00015      
+19.810          APPLES_ITER_HZ       pXRelay_PEARS   1.08682      
+19.832          UXMS_935_ITER_GAP    uXMS_935        1.01915      
+19.832          UXMS_935_ITER_LEN    uXMS_935        0.00009      
+19.850          DB_EVENT             MOOSDB_pears    disconnected=uXMS_935 
+19.871          UXMS_900_ITER_GAP    uXMS_900        1.02075      
+19.871          UXMS_900_ITER_LEN    uXMS_900        0.00009      
+19.877          DB_EVENT             MOOSDB_pears    disconnected=pXRelay_APPLES 
+20.076          UXMS_900_ITER_GAP    uXMS_900        1.02347      
+20.076          UXMS_900_ITER_LEN    uXMS_900        0.00021      
+20.242          LOGGER_DIRECTORY     pLogger         ./MOOSLog_15_3_2018_____13_14_37 
+20.278          UXMS_900_STATUS      uXMS_900        AppErrorFlag=false,Uptime=13.1151,cpuload=0.239,memory_kb=1508,memory_max_kb=1508,MOOSName=uXMS_900,Publishing="APPCAST,UXMS_900_ITER_GAP,UXMS_900_ITER_LEN,UXMS_900_STATUS,",Subscribing="APPCAST_REQ,APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,DB_UPTIME,PEARS,PEARS_ITER_HZ,PEARS_POST_HZ,PXOUT," 
+20.278          UXMS_900_ITER_GAP    uXMS_900        1.00860      
+20.278          UXMS_900_ITER_LEN    uXMS_900        0.00006      
+20.481          UXMS_900_ITER_GAP    uXMS_900        1.01748      
+20.481          UXMS_900_ITER_LEN    uXMS_900        0.00018      
+20.481          DB_TIME              MOOSDB_pears    1521134097.45440 
+20.481          DB_UPTIME            MOOSDB_pears    20.69356     
+20.481          DB_CLIENTS           MOOSDB_pears    uXMS_900,pXRelay_PEARS,pShare,pLogger, 
+20.482          DB_VARSUMMARY        MOOSDB_pears    APPCAST              13:14:49.927         uXMS_935             0.1 Hz S  proc=uXMS_935!@#iter=1...
+APPCAST_REQ          18:59:59.000         (write pending)      0.0 Hz ~  
+                   APPLES               18:59:59.000         (write pending)      0.0 Hz ~  
+                   APPLES_ITER_HZ       13:14:56.783         pXRelay_PEARS        1.0 Hz D  1.1                  
+APPLES_POST_HZ       18:59:59.000         (write pending)      0.0 Hz ~  
+                   DB_CLIENTS           13:14:57.454         MOOSDB_pears         0.5 Hz S  uXMS_900,pXRelay_PEARS...
+DB_EVENT             13:14:56.849         MOOSDB_pears         0.4 Hz S  disconnected=pXRelay_A...
+DB_QOS               13:14:55.384         MOOSDB_pears         0.5 Hz S  pLogger=0.312805:0.340...
+DB_RWSUMMARY         13:14:55.384         MOOSDB_pears         0.5 Hz S  uXMS_935=APPCAST_REQ:A...
+DB_TIME              13:14:57.454         MOOSDB_pears         0.5 Hz D  1521134097.5         
+DB_UPTIME            13:14:57.454         MOOSDB_pears         0.5 Hz D  20.7                 
+DB_VARSUMMARY        13:14:55.384         MOOSDB_pears         0.5 Hz S  APPCAST              1...
+LOGGER_DIRECTORY     13:14:57.215         pLogger              0.0 Hz S  ./MOOSLog_15_3_2018___...
+LOGGER_RESTART       18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_DEBUG           18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_SYSTEM          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS                18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS_ITER_HZ        13:14:56.549         pXRelay_APPLES       1.0 Hz D  1.2                  
+PEARS_POST_HZ        18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_CMD          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_STATUS       13:14:55.995         pLogger              0.5 Hz S  AppErrorFlag=false,Upt...
+PSHARE_CMD           18:59:59.000         (write pending)      0.0 Hz ~  
+                   PSHARE_INPUT_SUMMARY 13:14:56.452         pShare               1.0 Hz S  localhost:9201      
+PSHARE_OUTPUT_SUMMARY 13:14:56.452         pShare               1.0 Hz S  PEARS->PEARS:localhost...
+PSHARE_STATUS        13:14:56.394         pShare               0.5 Hz S  AppErrorFlag=false,Upt...
+PXOUT                18:59:59.000         (write pending)      0.0 Hz ~  
+                   PXRELAY_APPLES_STATUS 13:14:56.549         pXRelay_APPLES       0.4 Hz S  AppErrorFlag=false,Upt...
+PXRELAY_PEARS_STATUS 13:14:55.778         pXRelay_PEARS        0.5 Hz S  AppErrorFlag=false,Upt...
+UXMS_900_ITER_GAP    13:14:57.454         uXMS_900             4.9 Hz D  1.0                  
+UXMS_900_ITER_LEN    13:14:57.454         uXMS_900             4.9 Hz D  0.0                  
+UXMS_900_STATUS      13:14:57.250         uXMS_900             0.5 Hz S  AppErrorFlag=false,Upt...
+UXMS_935_ITER_GAP    13:14:56.804         uXMS_935             4.9 Hz D  1.0                  
+UXMS_935_ITER_LEN    13:14:56.804         uXMS_935             4.9 Hz D  0.0                  
+UXMS_935_STATUS      13:14:55.995         uXMS_935             0.4 Hz S  AppErrorFlag=false,Upt...
+ 
+20.482          DB_QOS               MOOSDB_pears    pLogger=0.225067:0.340939:0.108957:0.141382,pShare=0.231028:0.359774:0.105858:0.214195,pXRelay_PEARS=0.159025:0.374079:0.159025:0.205851,uXMS_900=0.251055:0.326157:0.195026:0.221777, 
+20.482          DB_RWSUMMARY         MOOSDB_pears    uXMS_900=APPCAST_REQ:APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:DB_UPTIME:PEARS:PEARS_ITER_HZ:PEARS_POST_HZ:PXOUT&APPCAST:UXMS_900_ITER_GAP:UXMS_900_ITER_LEN:UXMS_900_STATUS,pXRelay_PEARS=PEARS&APPLES_ITER_HZ:PXRELAY_PEARS_STATUS,pShare=PEARS:PSHARE_CMD&PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:PSHARE_STATUS,pLogger=APPCAST:APPCAST_REQ:APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:DB_CLIENTS:DB_EVENT:DB_QOS:DB_RWSUMMARY:DB_TIME:DB_UPTIME:DB_VARSUMMARY:LOGGER_DIRECTORY:LOGGER_RESTART:MOOS_DEBUG:MOOS_SYSTEM:PEARS:PEARS_ITER_HZ:PEARS_POST_HZ:PLOGGER_CMD:PLOGGER_STATUS:PSHARE_CMD:PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:PSHARE_STATUS:PXOUT:PXRELAY_APPLES_STATUS:PXRELAY_PEARS_STATUS:UXMS_900_ITER_GAP:UXMS_900_ITER_LEN:UXMS_900_STATUS:UXMS_935_ITER_GAP:UXMS_935_ITER_LEN:UXMS_935_STATUS&LOGGER_DIRECTORY:PLOGGER_STATUS 
+20.487          PSHARE_OUTPUT_SUMMARY pShare          PEARS->PEARS:localhost:9200 
+20.487          PSHARE_INPUT_SUMMARY pShare          localhost:9201 
+20.684          UXMS_900_ITER_GAP    uXMS_900        1.01514      
+20.684          UXMS_900_ITER_LEN    uXMS_900        0.00010      
+20.811          PXRELAY_PEARS_STATUS pXRelay_PEARS   AppErrorFlag=false,Uptime=13.6516,cpuload=0.03674,memory_kb=1356,memory_max_kb=1356,MOOSName=pXRelay_PEARS,Publishing="APPLES_ITER_HZ,PXRELAY_PEARS_STATUS,",Subscribing="PEARS," 
+20.811          APPLES_ITER_HZ       pXRelay_PEARS   1.07955      
+20.886          UXMS_900_ITER_GAP    uXMS_900        1.00971      
+20.886          UXMS_900_ITER_LEN    uXMS_900        0.00016      
