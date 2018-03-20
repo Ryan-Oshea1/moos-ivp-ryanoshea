@@ -66,6 +66,7 @@ Behavior = BHV_Waypoint
   runflag   = LOITER=false
   endflag   = STATION_KEEP = true
   endflag   = RETURNED = true
+  endflag   = LOITER=true
 //  endflag   = GPS_TIMER_RESET = true
 //  endflag   = RETURN = false
   perpetual = true
@@ -114,7 +115,7 @@ Behavior = BHV_Timer
  {
    // General Behavior Parameters
    // ---------------------------
-   name         = gps_timer            // default
+   name         = refuel_timer            // default
    condition    = MODE==REFUEL    // example
    duration     = 60                  // example
    //idleflag     = WAITING=false        // example
@@ -130,7 +131,7 @@ Behavior = BHV_Timer
 
 
    perpetual = true
-   duration_reset = LOITER=true
+   duration_reset = DEPLOY=true
 
 
 
