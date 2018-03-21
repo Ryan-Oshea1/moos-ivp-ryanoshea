@@ -22,6 +22,7 @@ Processconfig = ANTLER
   Run = pHostInfo       @ NewConsole = false
   Run = uFldShoreBroker @ NewConsole = false
   Run = uTimerScript    @ NewConsole = false
+  Run = pPointAssign    @ NewConsole = false
 }
 
 #include plug_pShare.moos
@@ -112,6 +113,11 @@ ProcessConfig = pMarineViewer
   appcast_viewable = true
   appcast_color_scheme = indigo
 
+  SCOPE = VISIT_POINT_1
+  SCOPE = VISIT_POINT_2
+  SCOPE = VISIT_POINT
+  SCOPE = UTS_PAUSE
+  SCOPE = NUM_RESULT
   SCOPE = NODE_MESSAGE
   SCOPE = DEPLOY_ALL
 
@@ -153,4 +159,15 @@ ProcessConfig = uTimerScript
    event = var=VISIT_POINT, val="x=$[RND_VAL_x], y=$[RND_VAL_y], id=$[TCOUNT]", time=0, amt=100
    event = var=VISIT_POINT, val="lastpoint", time=0
  }
+
+ProcessConfig = pPointAssign
+ {
+	AppTick      = 10
+	CommsTick    = 10
+	incoming_var = VISIT_POINT
+	outgoing_var = VISIT_POINT_GILDA
+
+
+ }
+
 

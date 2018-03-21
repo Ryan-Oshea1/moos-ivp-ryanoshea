@@ -21,6 +21,7 @@ ADD_SUBDIRECTORY(pPrimeFactor)
 #ADD_SUBDIRECTORY(pFoobar)
 ADD_SUBDIRECTORY(pOdometry)
 ADD_SUBDIRECTORY(pCommunicationAngle)
+ADD_SUBDIRECTORY(pPointAssign)
 ##############################################################################
 #                           END of CMakeLists.txt
 ##############################################################################
