@@ -53,6 +53,10 @@ ProcessConfig = uFldShoreBroker
 
   BRIDGE   = src=UP_LOITER_$N, alias=UP_LOITER
   BRIDGE   = src=HELM_MAP_CLEAR, alias=HELM_MAP_CLEAR
+
+  // bridge visit_points to all of the individual vehicles
+
+ bridge = src=VISIT_POINT_$V, alias = VISIT_POINT
 }
 
 //--------------------------------------------------
@@ -113,8 +117,8 @@ ProcessConfig = pMarineViewer
   appcast_viewable = true
   appcast_color_scheme = indigo
 
-  SCOPE = VISIT_POINT_1
   SCOPE = VISIT_POINT_2
+  SCOPE = VISIT_POINT_1
   SCOPE = VISIT_POINT
   SCOPE = UTS_PAUSE
   SCOPE = NUM_RESULT
@@ -166,7 +170,8 @@ ProcessConfig = pPointAssign
 	CommsTick    = 10
 	incoming_var = VISIT_POINT
 	outgoing_var = VISIT_POINT_GILDA
-
+	vname	     = DANA
+	vname 	     = CHARLIE
 
  }
 

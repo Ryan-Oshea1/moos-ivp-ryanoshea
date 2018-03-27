@@ -91,6 +91,33 @@ bool PointAssign::OnConnectToServer()
 
 bool PointAssign::Iterate()
 {
+  
+    //setup visit point 1 and 2
+    string visit_point_vehicle_1;
+    string visit_point_vehicle_2 = "VISIT_POINT_";
+
+    //size of the name parameter
+    Notify("VNAME_LENGTH", m_vname_list.size());
+
+    int vp_count = 1; 
+  list<string>::iterator p_vp;
+  for(p_vp=m_vname_list.begin(); p_vp!=m_vname_list.end(); ) {
+     string str_vp = *p_vp;
+     string full_result = str_vp.c_str();
+     if(vp_count == 1)
+       {
+     m_vname_string_1 = "VISIT_POINT_" + full_result;
+     Notify("VNAME_CONTENTS", m_vname_string_1);
+       }
+
+  if(vp_count == 2)
+    {
+      m_vname_string_2 = "VISIT_POINT_" + full_result;
+    }
+
+    p_vp = m_vname_list.erase(p_vp);
+  vp_count = vp_count+1;
+  }
 
   Notify("UTS_PAUSE", "toggle");
   //int count = 0;
@@ -99,17 +126,18 @@ bool PointAssign::Iterate()
     string str = *p;
     string full_result = str.c_str();
     string assign_by_region = "true";
+
      if( assign_by_region == "true" && m_count != 0 && m_count !=101 )
       { 
 	string x_val = tokStringParse(full_result, "x", ',', '=');
 	float x_val_float = atof(x_val.c_str());
 	if( x_val_float > 112)
 	  {
-	    Notify("VISIT_POINT_1", full_result);
+	    Notify("VISIT_POINT_2", m_vname_string_2);
 	  }
 	else
 	  {
-	    Notify("VISIT_POINT_2", full_result);
+	    Notify("VISIT_POINT_1", m_vname_string_1);
 	  }
       }
      
@@ -149,8 +177,9 @@ bool PointAssign::OnStartUp()
       string param = tolower(biteStringX(line, '='));
       string value = line;
       
-      if(param == "foo") {
-        //handled
+      if(param == "vname") {
+	        m_vname_list.push_back(value);
+		m_vname_string = value;
       }
       else if(param == "bar") {
         //handled

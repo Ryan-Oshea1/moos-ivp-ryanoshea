@@ -31,6 +31,10 @@ class PointAssign : public CMOOSApp
    string m_visit_point;
    list<string> m_visit_points_str_list;
    int m_count;
+   list<string> m_vname_list;
+   string m_vname_string;
+   string m_vname_string_1;
+   string m_vname_string_2;
  private: // State variables
 };
 
