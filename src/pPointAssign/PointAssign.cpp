@@ -128,8 +128,14 @@ bool PointAssign::Iterate()
     string full_result = str.c_str();
     bool assign_by_region;
     setBooleanOnString(assign_by_region,m_assign_by_region);
-    
-     if( assign_by_region == true && m_count != 0 && m_count !=101 )
+    if( full_result == "lastpoint")
+      {
+	Notify(m_vname_string_2, full_result);
+	Notify(m_vname_string_1, full_result);
+      }
+    else
+      {
+    if( assign_by_region == true)// && m_count != 0 && m_count !=101 )
       { 
 	string x_val = tokStringParse(full_result, "x", ',', '=');
 	double x_val_float = atof(x_val.c_str());
@@ -152,7 +158,7 @@ bool PointAssign::Iterate()
 	  }
       }
      
-     if( assign_by_region == false && m_count != 0 && m_count !=101)
+     if( assign_by_region == false)
        { // if the count is even, assign to vehicle one
 	 string x_val = tokStringParse(full_result, "x", ',', '=');
 	 double x_val_float = atof(x_val.c_str());
@@ -173,6 +179,7 @@ bool PointAssign::Iterate()
 	     postViewPoint(x_val_float, y_val_float, label, "red");
 	   }
        }
+      }
       // count = count +1;
   p = m_visit_points_str_list.erase(p);
   m_count = m_count + 1;
