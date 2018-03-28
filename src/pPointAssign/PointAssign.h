@@ -26,6 +26,7 @@ class PointAssign : public CMOOSApp
 
  protected:
    void RegisterVariables();
+   void postViewPoint(double , double , string, string);
 
  private: // Configuration variables
    string m_visit_point;
@@ -35,6 +36,7 @@ class PointAssign : public CMOOSApp
    string m_vname_string;
    string m_vname_string_1;
    string m_vname_string_2;
+   string m_assign_by_region; 
  private: // State variables
 };
 

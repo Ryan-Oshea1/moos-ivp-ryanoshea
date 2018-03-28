@@ -8,8 +8,9 @@
 #include <iterator>
 #include "MBUtils.h"
 #include "PointAssign.h"
-//#include "MBUtils.h"
-
+#include "GeomUtils.h"
+#include "XYObject.h"
+#include "MOOS/libMOOS/MOOSLib.h"
 using namespace std;
 
 //---------------------------------------------------------
@@ -125,31 +126,40 @@ bool PointAssign::Iterate()
   for(p=m_visit_points_str_list.begin(); p!=m_visit_points_str_list.end(); ) {
     string str = *p;
     string full_result = str.c_str();
-    string assign_by_region = "true";
-
-     if( assign_by_region == "true" && m_count != 0 && m_count !=101 )
+    bool assign_by_region;
+    setBooleanOnString(assign_by_region,m_assign_by_region);
+    
+     if( assign_by_region == true && m_count != 0 && m_count !=101 )
       { 
 	string x_val = tokStringParse(full_result, "x", ',', '=');
-	float x_val_float = atof(x_val.c_str());
+	double x_val_float = atof(x_val.c_str());
+
+	string y_val = tokStringParse(full_result, "y", ',', '=');
+	double y_val_float = atof(x_val.c_str());
+
+	string label = tokStringParse(full_result, "id", ',', '=');
+
+	//	postViewPoint(x_val_float, y_val_float, label, "white");
+
 	if( x_val_float > 112)
 	  {
-	    Notify("VISIT_POINT_2", m_vname_string_2);
+	    Notify(m_vname_string_2, full_result);
 	  }
 	else
 	  {
-	    Notify("VISIT_POINT_1", m_vname_string_1);
+	    Notify(m_vname_string_1, full_result);
 	  }
       }
      
-     if( assign_by_region == "false" && m_count != 0 && m_count !=101)
+     if( assign_by_region == false && m_count != 0 && m_count !=101)
        { // if the count is even, assign to vehicle one
 	 if( m_count%2 == 0)
 	   {
-	     Notify("VISIT_POINT_2", full_result);
+	     Notify(m_vname_string_2, full_result);
 	   }
 	 else
 	   {
-	     Notify("VISIT_POINT_1", full_result);
+	     Notify(m_vname_string_1, full_result);
 	   }
        }
       // count = count +1;
@@ -176,13 +186,13 @@ bool PointAssign::OnStartUp()
       string line  = *p;
       string param = tolower(biteStringX(line, '='));
       string value = line;
-      
+
       if(param == "vname") {
 	        m_vname_list.push_back(value);
 		m_vname_string = value;
       }
-      else if(param == "bar") {
-        //handled
+      else if(param == "assign_by_region") {
+        m_assign_by_region = value;
       }
     }
   }
@@ -199,3 +209,13 @@ void PointAssign::RegisterVariables()
   Register("VISIT_POINT", 0);
 }
 
+
+void PointAssign::postViewPoint(double x, double y, string label, string color)
+{
+  XYPoint point(x, y);
+  //point.set_label(label);
+  //point.set_color("vertex", color);
+  //point.set_param("vertex_size", "2");
+  //string spec = point.get_spec();
+  //Notify("VIEW_POINT",spec);
+}

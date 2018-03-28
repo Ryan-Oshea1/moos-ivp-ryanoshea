@@ -117,8 +117,8 @@ ProcessConfig = pMarineViewer
   appcast_viewable = true
   appcast_color_scheme = indigo
 
-  SCOPE = VISIT_POINT_2
-  SCOPE = VISIT_POINT_1
+  SCOPE = VISIT_POINT_DANA
+  SCOPE = VISIT_POINT_CHARLIE
   SCOPE = VISIT_POINT
   SCOPE = UTS_PAUSE
   SCOPE = NUM_RESULT
