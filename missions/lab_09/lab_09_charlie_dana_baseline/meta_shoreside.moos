@@ -160,7 +160,7 @@ ProcessConfig = uTimerScript
    rand_var    = varname=RND_VAL_x, min=-25, max=200, key=at_post
    rand_var    = varname=RND_VAL_y, min=-175, max=-25, key=at_post
    event = var=VISIT_POINT, val="firstpoint", time=0
-   event = var=VISIT_POINT, val="x=$[RND_VAL_x], y=$[RND_VAL_y], id=$[TCOUNT]", time=0, amt=100
+   event = var=VISIT_POINT, val="x=$[RND_VAL_x], y=$[RND_VAL_y], id=$[TCOUNT]", time=0, amt=10
    event = var=VISIT_POINT, val="lastpoint", time=0
  }
 
@@ -172,7 +172,7 @@ ProcessConfig = pPointAssign
 	outgoing_var = VISIT_POINT_GILDA
 	vname	     = DANA
 	vname 	     = CHARLIE
-
+	assign_by_region = true
  }
 
 

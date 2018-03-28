@@ -8,8 +8,8 @@
 #include <iterator>
 #include "MBUtils.h"
 #include "PointAssign.h"
-#include "GeomUtils.h"
-#include "XYObject.h"
+//#include "GeomUtils.h"
+#include "XYPoint.h"
 #include "MOOS/libMOOS/MOOSLib.h"
 using namespace std;
 
@@ -135,31 +135,42 @@ bool PointAssign::Iterate()
 	double x_val_float = atof(x_val.c_str());
 
 	string y_val = tokStringParse(full_result, "y", ',', '=');
-	double y_val_float = atof(x_val.c_str());
+	double y_val_float = atof(y_val.c_str());
 
 	string label = tokStringParse(full_result, "id", ',', '=');
 
-	//	postViewPoint(x_val_float, y_val_float, label, "white");
 
 	if( x_val_float > 112)
 	  {
 	    Notify(m_vname_string_2, full_result);
+	    postViewPoint(x_val_float, y_val_float, label, "yellow");
 	  }
 	else
 	  {
 	    Notify(m_vname_string_1, full_result);
+	    postViewPoint(x_val_float, y_val_float, label, "red");
 	  }
       }
      
      if( assign_by_region == false && m_count != 0 && m_count !=101)
        { // if the count is even, assign to vehicle one
+	 string x_val = tokStringParse(full_result, "x", ',', '=');
+	 double x_val_float = atof(x_val.c_str());
+
+	 string y_val = tokStringParse(full_result, "y", ',', '=');
+	 double y_val_float = atof(y_val.c_str());
+
+	 string label = tokStringParse(full_result, "id", ',', '=');
+
 	 if( m_count%2 == 0)
 	   {
 	     Notify(m_vname_string_2, full_result);
+	     postViewPoint(x_val_float, y_val_float, label, "yellow");
 	   }
 	 else
 	   {
 	     Notify(m_vname_string_1, full_result);
+	     postViewPoint(x_val_float, y_val_float, label, "red");
 	   }
        }
       // count = count +1;
@@ -212,10 +223,10 @@ void PointAssign::RegisterVariables()
 
 void PointAssign::postViewPoint(double x, double y, string label, string color)
 {
-  XYPoint point(x, y);
-  //point.set_label(label);
-  //point.set_color("vertex", color);
-  //point.set_param("vertex_size", "2");
-  //string spec = point.get_spec();
-  //Notify("VIEW_POINT",spec);
+    XYPoint point(x, y);
+  point.set_label(label);
+  point.set_color("vertex", color);
+  point.set_param("vertex_size", "2");
+  string spec = point.get_spec();
+  Notify("VIEW_POINT",spec);
 }
