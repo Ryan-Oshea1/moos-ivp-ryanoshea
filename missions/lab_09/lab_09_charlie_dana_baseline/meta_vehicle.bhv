@@ -4,6 +4,7 @@
 initialize   DEPLOY  = false
 initialize   RETURN  = false
 initialize   STATION_KEEP = false
+initialize   WAYPOINT = true
 initialize   LOITER  = true
 initialize   AVOID   = true
 
@@ -20,6 +21,11 @@ set MODE = RETURNING {
   MODE = ACTIVE
   RETURN = true
 } 
+
+set MODE = WAYPOINT {
+  MODE = ACTIVE
+  WAYPOINT = true
+}
 
 set MODE = LOITERING {
   MODE = ACTIVE
@@ -85,3 +91,20 @@ Behavior = BHV_StationKeep
         visual_hints = vertex_size=0, edge_color=gray50, label_color=invisible
 }
 
+//----------------------------------------------
+Behavior = BHV_Waypoint
+{
+  name      = waypt_follow
+  pwt       = 100
+  updates   = UPDATES_VAR
+  condition = MODE==WAYPOINT
+  endflag   = STATION_KEEP = true
+
+      speed = 1.2
+     radius = 3.0
+  nm_radius = 15.0
+//     points = $(START_POS)
+         points = pts={60,-40:60,-160:150,-160:180,-100:150,-40}	
+     repeat = 10
+       lead = 8
+}

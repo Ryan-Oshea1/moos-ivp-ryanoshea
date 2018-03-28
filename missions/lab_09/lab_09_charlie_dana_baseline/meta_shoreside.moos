@@ -21,7 +21,7 @@ Processconfig = ANTLER
   Run = pShare          @ NewConsole = false
   Run = pHostInfo       @ NewConsole = false
   Run = uFldShoreBroker @ NewConsole = false
-  Run = pGenPath	@ NewConsole = false
+  //Run = pGenPath	@ NewConsole = false
   Run = uTimerScript    @ NewConsole = false
   Run = pPointAssign    @ NewConsole = false
 }
@@ -51,7 +51,8 @@ ProcessConfig = uFldShoreBroker
 
   QBRIDGE  = DEPLOY, RETURN, STATION_KEEP, NODE_REPORT, NODE_MESSAGE
   QBRIDGE  = MOOS_MANUAL_OVERRIDE, APPCAST_REQ
-
+  
+  BRIDGE   = src=UPDATES_VAR, alias=UPDATES_VAR
   BRIDGE   = src=UP_LOITER_$N, alias=UP_LOITER
   BRIDGE   = src=HELM_MAP_CLEAR, alias=HELM_MAP_CLEAR
 

@@ -120,7 +120,7 @@ bool PointAssign::Iterate()
   vp_count = vp_count+1;
   }
 
-  Notify("UTS_PAUSE", "toggle");
+  //  Notify("UTS_PAUSE", "toggle");
   //int count = 0;
   list<string>::iterator p;
   for(p=m_visit_points_str_list.begin(); p!=m_visit_points_str_list.end(); ) {
