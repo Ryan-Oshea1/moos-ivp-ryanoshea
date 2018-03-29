@@ -100,6 +100,7 @@ bool PointAssign::Iterate()
     //size of the name parameter
     Notify("VNAME_LENGTH", m_vname_list.size());
 
+    //    Notify("UTS_PAUSE", "toggle");  
     int vp_count = 1; 
   list<string>::iterator p_vp;
   for(p_vp=m_vname_list.begin(); p_vp!=m_vname_list.end(); ) {
@@ -146,7 +147,7 @@ bool PointAssign::Iterate()
 	string label = tokStringParse(full_result, "id", ',', '=');
 
 
-	if( x_val_float > 112)
+	if( x_val_float > 87)
 	  {
 	    Notify(m_vname_string_2, full_result);
 	    postViewPoint(x_val_float, y_val_float, label, "yellow");
