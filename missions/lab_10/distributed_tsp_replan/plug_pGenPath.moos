@@ -1,0 +1,8 @@
+//--------------------------------------------------
+// pLogger Configuration Block (Created from Plugin)
+
+ProcessConfig = pGenPath
+{
+  AppTick 	= 5
+  CommsTick 	= 5
+}
