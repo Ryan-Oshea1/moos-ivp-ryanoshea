@@ -29,7 +29,12 @@ class GenPath : public CMOOSApp
 
  private: // Configuration variables
    list<string> m_visit_points_str_list;
+   list<string> m_visit_points_str_list_missed;
    string m_lastpoint_received;
+   double m_visit_radius; //default of 5
+   string m_genpath_regenerate;
+   double m_nav_x;
+   double m_nav_y;
  private: // State variables
 };
 

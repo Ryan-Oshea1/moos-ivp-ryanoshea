@@ -5,4 +5,5 @@ ProcessConfig = pGenPath
 {
   AppTick 	= 5
   CommsTick 	= 5
+  visit_radius = 1
 }

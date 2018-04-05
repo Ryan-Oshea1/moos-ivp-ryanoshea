@@ -17,6 +17,10 @@ using namespace std;
 
 GenPath::GenPath()
 {
+  m_visit_radius = 5; //default of f5
+  m_genpath_regenerate = "false";
+  m_nav_x = 0;
+  m_nav_y = 0;
 }
 
 //---------------------------------------------------------
@@ -70,9 +74,24 @@ bool GenPath::OnNewMail(MOOSMSG_LIST &NewMail)
 	    else
 	      {
 		m_visit_points_str_list.push_back(sval);
+		m_visit_points_str_list_missed.push_back(sval);
 	      }
-	      }
+	  }
       }
+    if(key == "GENPATH_REGENERATE")
+      {
+	m_genpath_regenerate = sval;
+      }
+    //set the NAV-X and NAV-Y
+    if( key == "NAV_X")
+      {
+	m_nav_x = dval;
+      }
+    if(key == "NAV_Y")
+      {
+	m_nav_y = dval;
+      }
+
   }
    return(true);
 }
@@ -108,6 +127,91 @@ bool GenPath::Iterate()
     p = m_visit_points_str_list.erase(p);
     }*/
 
+  // NOTIFY Console of visit radius
+  Notify("VISIT_RADIUS",m_visit_radius);
+
+
+  //we need to save all of the points that were missed in a new buffer
+  //if nav_x/y result in larger difference than the visit_radius, then we should add the point to the list, or we can just remove the points that are, sort of the opposite of what is going on in genpath
+  //m_visit_points_str_list_missed
+    if(m_visit_points_str_list_missed.size()>0)
+    {
+      list<string>::iterator p;
+      list<string>::iterator remove_point;
+
+      double f_min_x_loc = 10;
+      double f_min_y_loc = 20;
+      //     p=m_visit_points_str_list.begin();
+      for(p=m_visit_points_str_list_missed.begin(); p!=m_visit_points_str_list_missed.end(); )
+	{
+
+	  //get out the data for this point                                                                                                                                                                                                                 
+	  string str = *p;
+	  string full_result = str.c_str();
+
+	  string x_val = tokStringParse(full_result, "x", ',', '=');
+	  double x_val_float = atof(x_val.c_str());
+
+	  string y_val = tokStringParse(full_result, "y", ',', '=');
+	  double y_val_float = atof(y_val.c_str());
+
+	  string label = tokStringParse(full_result, "id", ',', '=');
+
+	  //if the difference between the point and the current x/y position is below the threshold, remove it from the missed list
+	  //assign first distance to minimum distance                                                                                                                                                                                                       
+	    
+	  
+	    
+	    double f_diff_x = m_nav_x - x_val_float;
+	    double f_diff_y = m_nav_y - y_val_float;
+	    double f_current_distance_missed = sqrt( pow(f_diff_x,2) + pow(f_diff_y,2));
+	    //remove the point from the list if it is less than the visit radius
+	    if(f_current_distance_missed < m_visit_radius)
+	      {
+		remove_point = p;
+			p=m_visit_points_str_list_missed.erase(remove_point);
+	      }
+	    else
+	      {
+		p++;
+	      }
+	  
+	  
+	}
+    }
+  
+  
+
+
+  //if genpath has been set to true, then we should regenerate the path using the list of missed points
+  if(m_genpath_regenerate == "true")
+    {
+      //reassign all of the values in the visit_points str list
+      //then let the program proceed as normal
+      //m_visit_points_str_list_missed
+      if(m_visit_points_str_list_missed.size()>0)
+       {
+	 m_visit_points_str_list = m_visit_points_str_list_missed;
+	 m_visit_points_str_list.assign(m_visit_points_str_list_missed.begin(),m_visit_points_str_list_missed.end());
+	 Notify("VISIT_STR_LIST_SIZE", m_visit_points_str_list_missed.size());
+      //else
+       //{
+       // Notify("STATION_KEEP","true");
+       //}
+      //set m_lastpoint_received == "true", so that the path planner gets run again
+      m_lastpoint_received = "true";
+      //set m_genpath_regenerate == "false", so that this doesnt get called again
+      m_genpath_regenerate = "false";
+       }
+      else
+	{
+	  Notify("WAYPOINT", "false");
+	}
+
+
+   }
+  
+  
   //if the last point in the list was "lastpoint"
   //then we know the list is complete and we can begin building the waypoints
   if(m_lastpoint_received == "true")
@@ -224,8 +328,9 @@ bool GenPath::OnStartUp()
       string param = tolower(biteStringX(line, '='));
       string value = line;
       
-      if(param == "foo") {
-        //handled
+      if(param == "visit_radius") {
+        //handles what to do with the new value
+	m_visit_radius = atof(value.c_str());
       }
       else if(param == "bar") {
         //handled
@@ -243,5 +348,9 @@ bool GenPath::OnStartUp()
 void GenPath::RegisterVariables()
 {
    Register("VISIT_POINT", 0);
+   Register("NAV_X", 0);
+   Register("NAV_Y", 0);
+   Register("GENPATH_REGENERATE", 0);
+
 }
 

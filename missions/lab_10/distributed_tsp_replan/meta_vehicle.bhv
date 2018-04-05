@@ -7,7 +7,7 @@ initialize   STATION_KEEP = false
 initialize   WAYPOINT = true
 initialize   LOITER  = false
 initialize   AVOID   = true
-
+initialize   GENPATH_REGENERATE = false
 set MODE = ACTIVE {
   DEPLOY = true
 } INACTIVE
@@ -89,6 +89,7 @@ Behavior = BHV_Waypoint
   runflag   = LOITER=false
   endflag   = RETURNED = true
   endflag   = RETURN = false
+
    updates      = TIMER_UPDATES        // example
 
    perpetual = true
@@ -130,15 +131,19 @@ Behavior = BHV_Waypoint
   pwt       = 100
   updates   = UPDATES_VAR
   condition = MODE==WAYPOINT
-  endflag   = STATION_KEEP = true
+  endflag   = RETURN = true
+  endflag   = WAYPOINT = false
+  endflag   = GENPATH_REGENERATE = true
+
 
       speed = 1.2
      radius = 3.0
   nm_radius = 15.0
 //     points = $(START_POS)
          points = pts={60,-40:60,-160:150,-160:180,-100:150,-40}	
-     repeat = 10
+     //repeat = 0
        lead = 8
+       perpetual = true
 }
 
 Behavior = BHV_Timer
