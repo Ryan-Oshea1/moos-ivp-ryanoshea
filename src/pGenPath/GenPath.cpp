@@ -21,6 +21,7 @@ GenPath::GenPath()
   m_genpath_regenerate = "false";
   m_nav_x = 0;
   m_nav_y = 0;
+  m_received_messages = 0;
 }
 
 //---------------------------------------------------------
@@ -35,6 +36,7 @@ GenPath::~GenPath()
 
 bool GenPath::OnNewMail(MOOSMSG_LIST &NewMail)
 {
+  AppCastingMOOSApp::OnNewMail(NewMail);
   MOOSMSG_LIST::iterator p;
    
   for(p=NewMail.begin(); p!=NewMail.end(); p++) {
@@ -75,6 +77,7 @@ bool GenPath::OnNewMail(MOOSMSG_LIST &NewMail)
 	      {
 		m_visit_points_str_list.push_back(sval);
 		m_visit_points_str_list_missed.push_back(sval);
+		m_received_messages = m_received_messages +1;
 	      }
 	  }
       }
@@ -128,6 +131,7 @@ bool GenPath::Iterate()
     }*/
 
   // NOTIFY Console of visit radius
+  AppCastingMOOSApp::Iterate();
   Notify("VISIT_RADIUS",m_visit_radius);
 
 
@@ -309,7 +313,7 @@ bool GenPath::Iterate()
     
     }
 
-
+  AppCastingMOOSApp::PostReport();
   return(true);
 }
 
@@ -319,6 +323,7 @@ bool GenPath::Iterate()
 
 bool GenPath::OnStartUp()
 {
+  AppCastingMOOSApp::OnStartUp();
   list<string> sParams;
   m_MissionReader.EnableVerbatimQuoting(false);
   if(m_MissionReader.GetConfiguration(GetAppName(), sParams)) {
@@ -347,6 +352,7 @@ bool GenPath::OnStartUp()
 
 void GenPath::RegisterVariables()
 {
+  AppCastingMOOSApp::RegisterVariables();
    Register("VISIT_POINT", 0);
    Register("NAV_X", 0);
    Register("NAV_Y", 0);
@@ -354,3 +360,8 @@ void GenPath::RegisterVariables()
 
 }
 
+bool GenPath::buildReport()
+{
+  m_msgs << "Number of messages received: " << m_received_messages << endl;
+  return(true);
+}

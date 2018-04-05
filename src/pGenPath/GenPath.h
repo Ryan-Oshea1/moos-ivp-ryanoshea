@@ -9,21 +9,22 @@
 #define GenPath_HEADER
 
 #include "MOOS/libMOOS/MOOSLib.h"
+#include "MOOS/libMOOS/Thirdparty/AppCasting/AppCastingMOOSApp.h" 
 
 using namespace std;
 
-class GenPath : public CMOOSApp
+class GenPath : public AppCastingMOOSApp
 {
  public:
    GenPath();
    ~GenPath();
-
+   
  protected: // Standard MOOSApp functions to overload  
    bool OnNewMail(MOOSMSG_LIST &NewMail);
    bool Iterate();
    bool OnConnectToServer();
    bool OnStartUp();
-
+   bool  buildReport();
  protected:
    void RegisterVariables();
 
@@ -35,6 +36,7 @@ class GenPath : public CMOOSApp
    string m_genpath_regenerate;
    double m_nav_x;
    double m_nav_y;
+   double  m_received_messages;
  private: // State variables
 };
 

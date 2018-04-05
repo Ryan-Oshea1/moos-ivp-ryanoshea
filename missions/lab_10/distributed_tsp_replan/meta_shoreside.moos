@@ -57,7 +57,6 @@ ProcessConfig = uFldShoreBroker
   BRIDGE   = src=HELM_MAP_CLEAR, alias=HELM_MAP_CLEAR
 
   // bridge visit_points to all of the individual vehicles
-
  bridge = src=VISIT_POINT_$V, alias = VISIT_POINT
 }
 
@@ -177,8 +176,9 @@ ProcessConfig = pPointAssign
 	CommsTick    = 10
 	incoming_var = VISIT_POINT
 	outgoing_var = VISIT_POINT_GILDA
-	vname	     = DANA
-	vname 	     = CHARLIE
+//for some reasone these must be capitalized
+	vname	     = DANA@RYANOSHEA
+	vname 	     = CHARLIE@RYANOSHEA
 	assign_by_region = true
  }
 
