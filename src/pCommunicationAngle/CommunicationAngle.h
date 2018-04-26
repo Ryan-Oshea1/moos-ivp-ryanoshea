@@ -9,8 +9,9 @@
 #define CommunicationAngle_HEADER
 
 #include "MOOS/libMOOS/MOOSLib.h"
+#include "MOOS/libMOOS/Thirdparty/AppCasting/AppCastingMOOSApp.h" 
 
-class CommunicationAngle : public CMOOSApp
+class CommunicationAngle : public AppCastingMOOSApp
 {
  public:
    CommunicationAngle();
@@ -21,7 +22,7 @@ class CommunicationAngle : public CMOOSApp
    bool Iterate();
    bool OnConnectToServer();
    bool OnStartUp();
-
+   bool buildReport();
  protected:
    void RegisterVariables();
    double m_vehicle_name;
@@ -40,8 +41,10 @@ class CommunicationAngle : public CMOOSApp
    double m_sound_speed_gradient;
    double m_water_depth;
    double m_time_interval;
-
-
+   double m_elevation_angle;
+   double m_radius_vehicle_c;
+   double m_radius_vehicle_host;
+   double m_z_circle;
 
  private: // Configuration variables
 
