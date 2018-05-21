@@ -45,7 +45,8 @@ class CommunicationAngle : public AppCastingMOOSApp
    double m_radius_vehicle_c;
    double m_radius_vehicle_host;
    double m_z_circle;
-
+   std::string acoustic_path_string;
+   std::string connectivity_location_string ;
  private: // Configuration variables
 
  private: // State variables

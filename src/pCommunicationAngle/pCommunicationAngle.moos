@@ -1,5 +1,25 @@
 //------------------------------------------------
 // pCommunicationAngle config block
+ServerHost = oceanai.mit.edu
+ServerPort = 9011
+
+ProcessConfig = ANTLER
+{
+  MSBetweenLaunches = 200
+
+ // Run = MOOSDB          @ NewConsole = false
+//  Run = pLogger         @ NewConsole = false
+ // Run = uSimMarine          @ NewConsole = false
+ // Run = pMarinePID      @ NewConsole = false
+ // Run = pHelmIvP        @ NewConsole = false
+ // Run = pMarineViewer     @ NewConsole = false
+ // Run = uProcessWatch     @ NewConsole = false
+ // Run = pNodeReporter     @ NewConsole = false
+  Run = pCommunicationAngle @ NewConsole = false
+ // Run = pOdometry     @ NewConsole = false
+//  Run = uTimerScript @ NewConsole = false
+}
+
 
 ProcessConfig = pCommunicationAngle
 {

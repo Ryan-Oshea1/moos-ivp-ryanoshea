@@ -83,7 +83,7 @@ ProcessConfig = uSimMarine
   start_y       = -20
   start_heading = 180
   start_speed   = 0
-
+  start_depth = 100
   prefix        = NAV
 
   turn_rate     = 40
@@ -193,6 +193,8 @@ ProcessConfig = pMarineViewer
   scope = R_V_H
   scope = R_V_C
   scope = F_Z_C
+  scope = ACOUSTIC_PATH
+  scope = 
 //  scope = M_SOUND_SPEED_GRADIENT
 //  scope = F_SOUND_SPEED_DEPTH
 //  scope = F_LAUNCH_ANGLE
@@ -257,9 +259,9 @@ ProcessConfig = uTimerScript
    AppTick   = 4
    CommsTick = 4
 
-   event  = var=collaborator_NAV_X, val=100, time=0.25
-   event  = var=collaborator_NAV_Y, val=-150, time=0.25
-   event  = var=collaborator_NAV_DEPTH, val=100, time=0.25
+   event  = var=collaborator_NAV_X, val=15000, time=0.25
+   event  = var=collaborator_NAV_Y, val=15000, time=0.25
+   event  = var=collaborator_NAV_DEPTH, val=1500, time=0.25
    event  = var=collaborator_NAV_HEADING, val=100, time=0.25
    event  = var=collaborator_NAV_SPEED, val=100, time=0.25
 

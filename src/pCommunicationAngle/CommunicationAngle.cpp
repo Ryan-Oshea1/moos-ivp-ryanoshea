@@ -160,48 +160,20 @@ bool CommunicationAngle::Iterate()
 {
   AppCastingMOOSApp::Iterate();
   //we assume the linear profile for simplicity
+  //set the constants and calculate some variables that reside in the function
+  //basic plan is to check if the angle is within the circle
 
-  //  m_surface_sound_speed = 1480; //meter per second                                                                             
-  // m_sound_speed_gradient = .0016; // meter per second per meter  
   uint64_t f_launch_angle = 1; //deg to rad
   double f_local_angle = f_launch_angle; 
   double f_sound_speed_depth = m_surface_sound_speed + m_sound_speed_gradient * m_nav_depth;
   double f_R = f_sound_speed_depth /(m_sound_speed_gradient * cos(f_launch_angle));
   double f_s = f_R * (f_launch_angle - f_local_angle) ;
   m_z_circle = (-1) * m_surface_sound_speed/m_sound_speed_gradient;
-  //  double f_r_s = f_R * [sin(f_launch_angle) + sin(f_s/f_R - f_launch_angle)];
-  //double f_z_s = f_R * cos(f_s/f_R) - m_surface_sound_speed/m_sound_speed_gradient;
-  //sqrt of the difference in distances
+
+  //sqrt of the difference in distances between vehicles
   double f_distance_between_3_D = sqrt(pow((m_nav_x - m_c_nav_x),2) + pow((m_nav_y - m_c_nav_y),2) + pow((m_nav_depth-m_c_nav_depth),2)); 
-  //  Notify("PATH_EXISTS", "iterate");
-  //double i = 1;
-  //loop through from 1 degree to 90 degreees
-  // for(double i=1;i<90; i++)
-  //{
-	  //      f_s = f_R * (f_launch_angle - f_local_angle) ;                                                                   
-	  //f_r_s = f_R * [sin(f_launch_angle) + sin(f_s/f_R - f_launch_angle)];                                                   
-	  //f_z_s = f_R * cos(f_s/f_R) - m_surface_sound_speed/m_sound_speed_gradient;                                           
-	  //  Notify("PATH_EXISTS", "in for loop");
-  
-	  //	  f_R = f_sound_speed_depth /(m_sound_speed_gradient * cos(f_launch_angle));
-	  //f_launch_angle = f_launch_angle + i;
-	  //Either the collaborator is above you, so you can trace a circle arc to them as in figure 4
-	  // or the collaborator is below you, so they lie on the arc of the circle
-	  // if the collaborator is above you (less depth) or on the same plane
-	  //if(m_nav_depth >= m_c_nav_depth )
-	  //{
-	      //		  Notify("PATH_EXISTS", "in above loop");
-	      //if the difference between is less than 5 meters
-	  //  if( (f_R*2 - f_distance_between_3_D) < 5 ) 
-	  //{
-	  //	  Notify("PATH_EXISTS", "true above");
-	  //	}
-	  // }
-	  // if the collaborator is below you 
-	  //if(m_nav_depth < m_c_nav_depth )
-	  //	  {
-	    //		  Notify("PATH_EXISTS", "in below loop");
-            //calculate the vectors
+
+            //calculate the vectors to the vehicle
 	    double f_x_difference_2_D = m_c_nav_x - m_nav_x;
 	    double f_y_difference_2_D = m_c_nav_y - m_nav_y;
 	    double f_z_difference_2_D = m_c_nav_depth - m_nav_depth;
@@ -210,15 +182,12 @@ bool CommunicationAngle::Iterate()
 	    double f_y_unit_vector = f_y_difference_2_D/f_distance_between_3_D;
 	    double f_z_unit_vector = f_z_difference_2_D/f_distance_between_3_D;
 
-	    //	    double f_circle_center_x = m_nav_x + f_x_unit_vector*f_R;
-	    //double f_circle_center_y = m_nav_y + f_y_unit_vector*f_R;
-	    
-	    //find the first bisector
+	    //find the first bisector, between the two vehicles
 	    double f_vehicle_bisector_x = f_x_difference_2_D/2 + m_nav_x;
 	    double f_vehicle_bisector_y = f_y_difference_2_D/2 + m_nav_y;
 	    double f_vehicle_bisector_z = f_y_difference_2_D/2 + m_nav_depth;
 
-	    //find the perpendicular line from there to the center of the circle
+	    //find the perpendicular line from there to the center of the circle, at some known height m_z_circle
 	    //define a new vector w that is the sum of these two vectors
 	    double f_w_magnitude = sqrt(pow(f_x_difference_2_D,2) + pow(f_y_difference_2_D,2));
 	    
@@ -235,37 +204,44 @@ bool CommunicationAngle::Iterate()
 	    double f_circle_y_loc = f_second_perp_y/f_second_perp_magnitude * f_intersect_z_dist + f_vehicle_bisector_y;
 	    double f_circle_z_loc = m_z_circle;
 
+	    //calculate the radius from the circle to the host vehicle and collaborator
 	    m_radius_vehicle_host = sqrt(pow((m_nav_x - f_circle_x_loc),2) + pow((m_nav_y - f_circle_y_loc),2) + pow((m_nav_depth - f_circle_z_loc),2));
 	    m_radius_vehicle_c = sqrt(pow((m_c_nav_x- f_circle_x_loc),2) + pow((m_c_nav_y - f_circle_y_loc),2) + pow((m_c_nav_depth - f_circle_z_loc),2));
-	    //   double f_depth_difference = m_c_nav_depth - m_nav_depth;
- 
-	    //double f_distance_from_circle_center_to_c = sqrt(pow((f_circle_center_x - m_c_nav_x),2) + pow((f_circle_center_y - m_c_nav_y),2) + pow((f_depth_difference),2));
-	 
-	    m_elevation_angle = acos(m_surface_sound_speed/m_sound_speed_gradient/m_radius_vehicle_host);
+			 
+	    //if there is little difference between the two calculate the angle and report acoustic path and connectivity location
+	    m_elevation_angle = -1*acos(m_surface_sound_speed/m_sound_speed_gradient/m_radius_vehicle_host);
+
+	    //calculate Transmission Loss parameters
+	    double f_theta = 0; //need to update this value for accurate assesment
+	    double f_z_s = m_radius_vehicle_host * cos(m_elevation_angle) - m_surface_sound_speed/m_sound_speed_gradient;
+            double f_r_s = m_radius_vehicle_host * (sin(m_elevation_angle) - sin(f_theta));
+
+	    double f_J_s = f_r_s/sin(f_theta); //need to update
+
+	    double f_sound_speed_depth_c = m_surface_sound_speed + m_sound_speed_gradient * m_c_nav_depth;
+
+	    double f_pressure_field_s = 1/(4*3.1415) * sqrt(abs(f_sound_speed_depth_c*cos(m_elevation_angle)/(m_surface_sound_speed +f_J_s)));
+
+	    double f_transmission_loss = -20*log( f_pressure_field_s/(1/(4*3.1415)));
 
 
-	    //Notify("DIST_DIFF",(f_R) - (f_distance_from_circle_center_to_c)); 
+	    //NOTIFY a bunch of variables for testing
             Notify("F_SOUND_SPEED_DEPTH",(f_sound_speed_depth)); 
-
             Notify("M_SOUND_SPEED_GRADIENT",(m_sound_speed_gradient)); 
             Notify("F_LAUNCH_ANGLE",(f_launch_angle)); 
- 
 	    Notify("f_R",(f_R));
-	    //            Notify("center_to_center_dist",(f_distance_from_circle_center_to_c));
-
 	    Notify("R_V_H",(m_radius_vehicle_host));
             Notify("R_V_C",(m_radius_vehicle_c));
 	    Notify("E_A",m_elevation_angle);
 	    Notify("F_Z_C",m_z_circle);
-	    //            Notify("M_SOUND_SPEED_GRADIENT",(m_sound_speed_gradient));
-	    // Notify("F_LAUNCH_ANGLE",(f_launch_angle));
-	    //}
-	    //}
 
-
-  Notify("ACOUSTIC_PATH", "elev_angle= , transmission_loss= , id=oshea1@mit.edu");
-  //Notify("ACOUSTIC_PATH", m_c_nav_x);
-  Notify("CONNECTIVITY_LOCATION", "x= , y= , depth= , id=oshea1@mit.edu");
+	    //create the string which we then NOTIFY
+	    acoustic_path_string = "elev_angle= " + to_string(m_elevation_angle* 57.3) + " transmission_loss= " + to_string(f_transmission_loss) + ", id=oshea1@mit.edu";
+  Notify("ACOUSTIC_PATH", acoustic_path_string);
+  
+  //if there is an angle that works, notify this location
+  connectivity_location_string = "x=" + to_string(m_nav_x) + ", y= " +to_string(m_nav_y) + ", depth= " + to_string(m_nav_depth) + ", id=oshea1@mit.edu";
+  Notify("CONNECTIVITY_LOCATION", connectivity_location_string);
   AppCastingMOOSApp::PostReport();
   return(true);
 }
@@ -334,5 +310,7 @@ bool CommunicationAngle::buildReport()
       m_msgs << "Col Depth: " << m_c_nav_depth  << endl;
       m_msgs << "Col X  " << m_c_nav_x << endl;
       m_msgs << "Col Y  " << m_c_nav_y << endl;
+      m_msgs << "Acousting Path  " << acoustic_path_string << endl;
+      m_msgs << "Connectivity Location   " << connectivity_location_string << endl;
   return(true);
  }
